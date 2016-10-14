@@ -1,3 +1,3 @@
 # README
 
-This is FitTrack. A workout and exercise log.
+This is ADMD. An online software suite for AME/QME offices.
