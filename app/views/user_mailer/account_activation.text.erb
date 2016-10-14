@@ -1,0 +1,7 @@
+ADMD
+
+Hi <%= @user.name %>,
+
+	Thank you for creating an account with ADMD. Click on the link below to finish activating your account!
+
+	<%= edit_account_activation_url(@user.activation_token, email: @user.email) %>
