@@ -6,14 +6,22 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
 
-# 99.times do |n|
-#   name  = Faker::Name.name
-#   email = "example-#{n+1}@testy.org"
-#   password = "password"
-#   User.create!(name:  name,
-#               email: email,
-#               password:              password,
-#               password_confirmation: password,
-#               activated: true,
-#               activated_at: Time.zone.now)
-#end
+Patient.create!(name: "Test Patient",
+								address: "1234 Silly Ave Berkeley CA 94704",
+								phone: "5551234567",
+								ssn: "000112233",
+								dob: "10/5/1991",
+								:employer_name "The Moving Company",
+								:claim_number "1234567890",
+								:panel_number "1234567890",
+								:wcab_number "ADJ1234567890",
+								:notes "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
+
+Attorney.create!(
+	
+	)
+
+
+Adjuster.create!(
+
+	)

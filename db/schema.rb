@@ -10,10 +10,54 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714044709) do
+ActiveRecord::Schema.define(version: 20161014191847) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "adjusters", force: :cascade do |t|
+    t.string   "name"
+    t.string   "agency"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "fax"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "appointments", force: :cascade do |t|
+    t.string   "office"
+    t.string   "address"
+    t.string   "type"
+    t.string   "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "attorneys", force: :cascade do |t|
+    t.string   "name"
+    t.string   "firm"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "fax"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "patients", force: :cascade do |t|
+    t.string   "name"
+    t.string   "address"
+    t.string   "phone"
+    t.string   "ssn"
+    t.string   "dob"
+    t.string   "employer_name"
+    t.string   "claim_number"
+    t.string   "panel_number"
+    t.string   "wcab_number"
+    t.string   "notes"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
