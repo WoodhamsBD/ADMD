@@ -13,4 +13,15 @@ Rails.application.routes.draw do
   resources :users
   resources :account_activations, only: [:edit]
 
+  # Need Routes for all models 
+
+  #Patient
+
+  #Appointment
+
+  #Attorney
+
+  #Adjuster
+
+
 end

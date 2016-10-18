@@ -26,12 +26,15 @@ ActiveRecord::Schema.define(version: 20161014191847) do
   end
 
   create_table "appointments", force: :cascade do |t|
+    t.string   "title"
     t.string   "office"
     t.string   "address"
     t.string   "type"
     t.string   "status"
+    t.integer  "patient_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["patient_id"], name: "index_appointments_on_patient_id", using: :btree
   end
 
   create_table "attorneys", force: :cascade do |t|
@@ -50,13 +53,13 @@ ActiveRecord::Schema.define(version: 20161014191847) do
     t.string   "phone"
     t.string   "ssn"
     t.string   "dob"
-    t.string   "employer_name"
+    t.string   "employer"
     t.string   "claim_number"
     t.string   "panel_number"
     t.string   "wcab_number"
     t.string   "notes"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -73,4 +76,5 @@ ActiveRecord::Schema.define(version: 20161014191847) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  add_foreign_key "appointments", "patients"
 end

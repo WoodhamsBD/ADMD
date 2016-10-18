@@ -7,7 +7,7 @@ class CreatePatients < ActiveRecord::Migration[5.0]
     	t.string :phone
     	t.string :ssn
 			t.string :dob
-			t.string :employer_name
+			t.string :employer
 			t.string :claim_number
 			t.string :panel_number
 			t.string :wcab_number
