@@ -1,9 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-
   end
 
-  def contact
-  	
+  def calendar
   end
 end

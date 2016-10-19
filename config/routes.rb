@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get  '/contact', to: 'static_pages#contact'
+  get '/calendar', to: 'static_pages#calendar'
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'
 
@@ -16,12 +17,15 @@ Rails.application.routes.draw do
   # Need Routes for all models 
 
   #Patient
+  resources :patients
 
   #Appointment
+  resources :appointment
 
   #Attorney
+  resources :attorney
 
   #Adjuster
-
+  resources :adjuster
 
 end

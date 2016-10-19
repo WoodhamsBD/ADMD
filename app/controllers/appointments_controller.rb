@@ -8,6 +8,10 @@ class AppointmentsController < ApplicationController
 		@appointment = Appointment.find(params[:id])
 	end
 
+	def new
+		@appointment = Appointment.new
+	end
+
 	def create
 		@appointment = Appointment.new(appointment_params)
 			if @appointment.save

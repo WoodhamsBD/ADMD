@@ -1,19 +1,23 @@
 class PatientsController < ApplicationController
 
-	def index
-	end
+	# def index
+	# end
 
-	def show
-	end
+	# def show
+	# 	@patient = Patient.find(params[:id])
+	# end
 
-	def create
-	end
+	# def create
+	# end
 
-	def update
-	end
+	# def edit
+	# end
 
-	def destroy
-	end
+	# def update
+	# end
 
-	
+	# def destroy
+	# end
+
+
 end
