@@ -3,9 +3,9 @@
 		<%= link_to 'ADMD', root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home", root_path %></li>
         <li><%= link_to "Patients", patients_path %></li>
         <li><%= link_to "Calendar", calendar_path %></li>
+        <li><%= link_to "Appointments", appointment_index_path %></li>
         <% if logged_in? %>
           <li><%= link_to "Users", users_path %></li>
           <li class="dropdown">

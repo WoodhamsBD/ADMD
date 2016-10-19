@@ -4,4 +4,7 @@ class StaticPagesController < ApplicationController
 
   def calendar
   end
+
+  def appointment
+  end
 end

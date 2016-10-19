@@ -1,15 +1,11 @@
 class AppointmentsController < ApplicationController
 
 	def index
-		@patients = Appointment.paginate(page: params[:page])
+		@appointment = Appointment.paginate(page: params[:page])
 	end
 
 	def show
 		@appointment = Appointment.find(params[:id])
-	end
-
-	def new
-		@appointment = Appointment.new
 	end
 
 	def create
@@ -34,9 +30,11 @@ class AppointmentsController < ApplicationController
 
 	end
 
-	def destroy
-
-	end
+  def destroy
+    Appointment.find(params[:id]).destroy
+    flash[:success] = "Appointment deleted"
+    redirect_to root_url
+  end
 
   private
 
