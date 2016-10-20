@@ -1,4 +1,9 @@
 
 <% provide(:title, "Calendar") %>
-<h1>Calendar</h1>
-	<p>Calendar View</p>
+
+<div id="calendar">
+	<%= month_calendar do |date| %>
+	  <%= date.day %>
+	<% end %>
+</div>
+

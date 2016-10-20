@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 20161014191847) do
     t.string   "type"
     t.string   "status"
     t.integer  "patient_id"
+    t.datetime "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["patient_id"], name: "index_appointments_on_patient_id", using: :btree

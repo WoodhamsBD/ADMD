@@ -28,8 +28,6 @@ class AppointmentsController < ApplicationController
     end
   end
 
-	end
-
   def destroy
     Appointment.find(params[:id]).destroy
     flash[:success] = "Appointment deleted"
@@ -41,6 +39,4 @@ class AppointmentsController < ApplicationController
 	  def appointment_params
 	  	params.require(:title, :office, :address, :type, :status)
 	  end
-
-
 end

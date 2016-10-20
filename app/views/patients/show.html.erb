@@ -5,12 +5,25 @@
 		<p>Here will be buttons for each: Appointments, Events, Billing, Edit</p>
 	</div>
 </div>
+
+
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= @patient.name %>
-      </h1>
+  <aside class="col-md-6">
+    <section class="patient_info">
+      <h1><%= @patient.name %></h1>
+      <hr>
+
+        <h4>Report Information:</h4>
+        <p>Claim Number: <%= @patient.claim_number %>
+        <p>Panel Number: <%= @patient.panel_number %>
+        <p>WCAB Number: <%= @patient.wcab_number %>
+        <h4>Address:</h4>
+        <p><%= @patient.address %></p>
+        <h4>Phone Number:</h4><p><%= @patient.phone %></p>
+        <h4>SSN:</h4><p><%= @patient.ssn %> </p>
+        <h4>Date Of Birth:</h4><p><%= @patient.dob %></p>
+
+        <h4>Notes: <%=@patient.notes %></h4>
     </section>
   </aside>
 </div>

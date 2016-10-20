@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   resources :patients
 
   #Appointment
-  resources :appointment
+  resources :appointments
 
   #Attorney
   resources :attorney
