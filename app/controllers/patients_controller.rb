@@ -8,15 +8,18 @@ class PatientsController < ApplicationController
 		@patient = Patient.find(params[:id])
 	end
 
+	def new
+		@patient = Patient.new
+	end
+
 	def create
 		@patient = Patient.new(patient_params)
 			if @patient.save
-				flash[:info] = "User was added to the system"
-				redirect_to root_url
+				flash[:info] = "Patient was added to the system"
+				redirect_to @patient
 			else
 				render 'new'
 			end
-
 	end
 
 
@@ -27,7 +30,7 @@ class PatientsController < ApplicationController
 	def update
 		@patient = Patient.find(params[:id])
 		if @patient.update_attributes(patient_params)
-			flash[:success] = "User Updated"
+			flash[:success] = "Patient Updated"
 			redirect_to @patient
 		else
 			render 'edit'
@@ -38,6 +41,13 @@ class PatientsController < ApplicationController
 		Patient.find(params[:id]).destroy
 		flash[:success] = "Patient Deleted"
 		redirect_to users_url
+	end
+
+
+	private
+
+	def patient_params
+		params.require(:patient).permit(:name, :address, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes)
 	end
 
 

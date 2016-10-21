@@ -2,7 +2,9 @@
 
 <div class="row">
 	<div class="options_row center">
-		<p>Here will be buttons for each: Appointments, Events, Billing, Edit</p>
+    <%= link_to "Edit Patient", edit_patient_path, class: "btn btn-primary" %>
+    <%= link_to "delete", @patient, method: :delete,:data => {confirm: 'Are you sure?'}, class: "btn btn-primary" %> 
+		<p>Here will be buttons for each: Appointments, Events, Billing</p>
 	</div>
 </div>
 

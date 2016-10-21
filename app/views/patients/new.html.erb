@@ -1,0 +1,42 @@
+<% provide(:title, 'New Patient') %>
+<h1>New Patient Information:</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+		<%= form_for(@patient) do |f| %>
+      <%= render 'shared/patient_messages' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+
+      <%= f.label :phone %>
+      <%= f.text_field :phone, class: 'form-control' %>
+
+      <%= f.label :ssn %>
+      <%= f.text_field :ssn, class: 'form-control' %>
+
+      <%= f.label :dob %>
+      <%= f.text_field :dob, class: 'form-control capitalize' %>
+
+      <%= f.label :employer %>
+      <%= f.text_field :employer, class: 'form-control' %>
+
+      <%= f.label :claim_number %>
+      <%= f.text_field :claim_number, class: 'form-control' %>
+
+      <%= f.label :panel_number %>
+      <%= f.text_field :panel_number, class: 'form-control' %>
+
+      <%= f.label :wcab_number %>
+      <%= f.text_field :wcab_number, class: 'form-control' %>
+
+      <%= f.label :notes %>
+      <%= f.text_field :notes, class: 'form-control' %>
+
+      <%= f.submit "Create this Patient", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
