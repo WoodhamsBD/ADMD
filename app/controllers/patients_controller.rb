@@ -1,7 +1,12 @@
 class PatientsController < ApplicationController
 
 	def index
-		@patients = Patient.paginate(page: params[:page])
+		#@patients = Patient.paginate(page: params[:page])
+		if params[:search]
+			@patients = Patient.search(params[:search]).paginate(page: params[:page])
+		else
+			@patients = Patient.paginate(page: params[:page])
+		end
 	end
 
 	def show

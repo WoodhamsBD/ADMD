@@ -1,4 +1,16 @@
-<li>
-	<%= link_to patient.name, patient %>
-	<%= link_to "delete", patient, method: :delete, data: { confirm: "You are sure? There is no recovery option!" } %>
-</li>
+
+
+
+<table class="patientTable">
+	<tr>
+		<th> ID </th>
+		<th> Name </th>
+		<th> DOB </th>
+	</tr>
+	<tr>
+		<td><%= patient.id %></td>
+		<td><%= link_to patient.name, patient %></td>
+		<td><%= patient.dob %></td>
+	</tr>
+
+</table>

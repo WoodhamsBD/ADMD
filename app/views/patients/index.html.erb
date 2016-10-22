@@ -1,6 +1,16 @@
 <% provide(:title, 'All Patients') %>
 <h1>All Patients</h1>
 
+<div class="col-md-2">
+	<%= form_tag(patients_path, method: :get, id: 'search-form') do %>
+		<p>
+	  <%= text_field_tag :search, params[:search], placeholder:"Search By Name" %>
+	  <%= submit_tag 'Search', name: nil %>
+	  </p>
+	<% end %>
+</div>
+
+
 <%= will_paginate %>
 	
 <ul class="patients">
