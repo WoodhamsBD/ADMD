@@ -6,7 +6,7 @@
 		<%= form_for(@patient) do |f| %>
       <%= render 'shared/patient_messages' %>
 
-      <div class="col-md-5 col-md-offset-1 patient_intake">
+      <div class="col-md-5 patient_intake">
         <%= f.label :name %>
         <%= f.text_field :name, class: 'form-control' %>
 
@@ -20,7 +20,7 @@
         <%= f.text_field :ssn, class: 'form-control' %>
 
         <%= f.label :dob %>
-        <%= f.text_field :dob, class: 'form-control capitalize' %>
+        <%= f.text_field :dob, class: 'form-control' %>
 
         <%= f.label :employer %>
         <%= f.text_field :employer, class: 'form-control' %>
@@ -35,21 +35,53 @@
         <%= f.text_field :wcab_number, class: 'form-control' %>
 
         <%= f.label :notes %>
-        <%= f.text_field :notes, class: 'form-control' %>
+        <%= f.text_area :notes, :rows => 3, class: 'form-control' %>
       </div>
 
       <div class="col-md-5 col-md-offset-1 patient_intake">
-        <%= f.label :attorney %>
-        
+        <%= f.fields_for :attorney do |a| %>
+            <%= a.label :Attorney %>
+            <%= a.text_field :name, class: 'form-control' %>
 
+            <%= a.label :firm %>
+            <%= a.text_field :firm, class: 'form-control' %>
 
+            <%= a.label :address %>
+            <%= a.text_field :address, class: 'form-control' %>
+
+            <%= a.label :phone %>
+            <%= a.text_field :phone, class: 'form-control' %>
+
+            <%= a.label :fax %>
+            <%= a.text_field :fax, class: 'form-control' %>
+        <% end %>
+
+        <br>
+        <%= f.fields_for :adjuster do |aj| %>
+          <%= aj.label :Adjuster %>
+          <%= aj.text_field :name, class: 'form-control' %>
+
+          <%= aj.label :agency %>
+          <%= aj.text_field :agency, class: 'form-control' %>
+
+          <%= aj.label :address %>
+          <%= aj.text_field :address, class: 'form-control' %>
+
+          <%= aj.label :phone %>
+          <%= aj.text_field :phone, class: 'form-control' %>
+
+          <%= aj.label :fax %>
+          <%= aj.text_field :fax, class: 'form-control' %>
+
+        <% end %>
       </div>
 
   </div>
 </div>
+
 <div class="row"> 
   <div class="col-md-3 col-md-offset-2">
-  <%= f.submit "Create this Patient", class: "btn btn-primary" %>
+  <%= f.submit "Save this Patient", class: "btn btn-primary" %>
   <% end %>
   </div>
 </div>

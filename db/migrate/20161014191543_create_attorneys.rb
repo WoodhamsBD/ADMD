@@ -6,6 +6,7 @@ class CreateAttorneys < ActiveRecord::Migration[5.0]
     	t.string :address
     	t.string :phone
     	t.string :fax
+      t.integer :patient_id
 
       t.timestamps
     end
