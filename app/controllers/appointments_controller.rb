@@ -12,7 +12,7 @@ class AppointmentsController < ApplicationController
 		@appointment = Appointment.new(appointment_params)
 			if @appointment.save
 				flash[:info] = "Appointment has been saved."
-				redirect_to root_url
+				redirect_to patient_url
 			else
 				render 'new' # New appointment
 			end

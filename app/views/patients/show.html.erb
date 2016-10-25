@@ -9,7 +9,7 @@
 </div>
 
 <div class="row">
-  <aside class="col-md-6">
+  <aside class="col-md-4">
     <section class="patient_info">
       <h1><%= @patient.name %></h1>
       <hr>
@@ -24,7 +24,20 @@
         <h4>SSN:</h4><p><%= @patient.ssn %> </p>
         <h4>Date Of Birth:</h4><p><%= @patient.dob %></p>
 
-        <h4>Notes: <%=@patient.notes %></h4>
-    </section>
+        <h4>Notes:</h4><p><%= @patient.notes %></p>    
+        </section>
   </aside>
+
+  <div class="col-md-4">
+
+    <section class="patient_appointment_info">
+      <h4>Upcoming Appointments:</h4>
+
+    </section>
+
+
+    <section class="patient_attorney_info">
+      <h4>Attorneys:</h4>
+    </section>
+  </div>
 </div>

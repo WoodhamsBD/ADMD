@@ -1,16 +1,8 @@
 
-
-
-<table class="patientTable">
-	<tr>
-		<th> ID </th>
-		<th> Name </th>
-		<th> DOB </th>
-	</tr>
 	<tr>
 		<td><%= patient.id %></td>
 		<td><%= link_to patient.name, patient %></td>
 		<td><%= patient.dob %></td>
+		<td><%= patient.updated_at %></td>
+		<td><%= patient.created_at %></td>
 	</tr>
-
-</table>

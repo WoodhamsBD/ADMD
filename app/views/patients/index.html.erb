@@ -12,9 +12,18 @@
 
 
 <%= will_paginate %>
-	
+
 <ul class="patients">
-	<%= render @patients %>
+	<table class="patientTable">
+		<tr>
+		<th> ID </th>
+		<th> Name </th>
+		<th> DOB </th>
+		<th> Updated At</th>
+		<th> Created At</th>
+	</tr>
+		<%= render @patients %>
+	</table>
 </ul>
 
 <%= will_paginate %>
