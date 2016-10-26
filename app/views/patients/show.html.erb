@@ -17,14 +17,17 @@
         <h4>Report Information:</h4>
         <p>Claim Number: <%= @patient.claim_number %>
         <p>Panel Number: <%= @patient.panel_number %>
-        <p>WCAB Number: <%= @patient.wcab_number %>
-        <h4>Address:</h4>
-        <p><%= @patient.address %></p>
-        <h4>Phone Number:</h4><p><%= @patient.phone %></p>
-        <h4>SSN:</h4><p><%= @patient.ssn %> </p>
-        <h4>Date Of Birth:</h4><p><%= @patient.dob %></p>
+        <p>WCAB Number: <%= @patient.wcab_number %> 
+        <hr>
 
-        <h4>Notes:</h4><p><%= @patient.notes %></p>    
+        <h5>Address:</h5>
+        <p><%= @patient.address %></p>
+        <h5>Phone Number:</h5><p><%= @patient.phone %></p>
+        <h5>SSN:</h5><p><%= @patient.ssn %> </p>
+        <h5>Date Of Birth:</h5><p><%= @patient.dob %></p>
+        
+        <hr>
+        <h5>Notes:</h5><p><%= @patient.notes %></p>    
         </section>
   </aside>
 
@@ -32,14 +35,22 @@
 
     <section class="patient_appointment_info">
       <h4>Upcoming Appointments:</h4>
+        <p>Pull list of Appointments here</p>
 
     </section>
 
 
     <section class="patient_attorney_info">
-      <h4>Attorneys:</h4>
-      <p>Name: <%= @patient.attorneys.name %></p>
-
+      <% if @patient.attorneys.any? %>
+      <h5>Attorneys:</h5>
+        <%= render @attorneys %>
+      <% end %>
     </section>
   </div>
+
+  <div class="col-md-4">
+    <h4>Templates</h4>
+
+  </div>
+
 </div>

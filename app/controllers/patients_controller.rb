@@ -10,12 +10,12 @@ class PatientsController < ApplicationController
 
 	def show
 		@patient = Patient.find(params[:id])
+		@attorneys = @patient.attorneys.paginate(page: params[:page])
 	end
 
 	def new
 		@patient = Patient.new
 		@patient.attorneys.build
-		@patient.adjusters.build
 	end
 
 	def create

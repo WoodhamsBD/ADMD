@@ -40,7 +40,7 @@
 
       <div class="col-md-5 col-md-offset-1 patient_intake">
         <%= f.fields_for :attorneys do |attorney_builder| %>
-            <%= attorney_builder.label :Attorney %>
+            <%= attorney_builder.label :name %>
             <%= attorney_builder.text_field :name, class: 'form-control' %>
 
             <%= attorney_builder.label :firm %>
@@ -58,7 +58,7 @@
 
         <br>
         <%= f.fields_for :adjusters do |aj| %>
-          <%= aj.label :Adjuster %>
+          <%= aj.label :name %>
           <%= aj.text_field :name, class: 'form-control' %>
 
           <%= aj.label :agency %>
@@ -75,9 +75,8 @@
 
         <% end %>
       </div>
-
-  </div>
 </div>
+
 <div class="row"> 
   <div class="col-md-3 col-md-offset-2">
   <%= f.submit "Save this Patient", class: "btn btn-primary" %>

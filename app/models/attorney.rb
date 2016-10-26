@@ -1,4 +1,4 @@
 class Attorney < ApplicationRecord
-	belongs_to :patient
-	validates :patient_id, presence: true
+	belongs_to :patient, inverse_of: :attorneys
+	validates :patient, presence: true
 end

@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   resources :appointments
 
   #Attorney
-  #resources :attorney
+  resources :attorneys
 
   #Adjuster
   #resources :adjuster

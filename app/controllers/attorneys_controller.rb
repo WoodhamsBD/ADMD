@@ -13,7 +13,7 @@ class AttorneysController < ApplicationController
 	end
 
 	def create
-		@attorney = Attorney.new(attorney_params)
+		@attorney = @patient.attorneys.build(attorney_params)
 		if @attorney.save
 			flash[:info] = "Attorney has been added to the system"
 			redirect_to @attorney

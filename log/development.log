@@ -22392,3 +22392,1596 @@ Processing by PatientsController#new as HTML
 Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/patients/new" for ::1 at 2016-10-25 21:18:23 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (281.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (24.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 647ms (Views: 587.5ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-25 21:18:39 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (260.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (17.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 456ms (Views: 366.0ms | ActiveRecord: 9.6ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-25 21:18:55 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [3 times] (2.4ms)
+  Rendered patients/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 56.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-25 21:18:58 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 50ms (Views: 46.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-25 21:19:03 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.5ms)
+  Rendered patients/new.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 59.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-25 21:19:48 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  Rendered patients/new.html.erb within layouts/application (8.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 64.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-25 21:19:50 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (18.1ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 65.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-25 21:19:52 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [3 times] (2.3ms)
+  Rendered patients/index.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-25 21:19:54 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.8ms)
+  Rendered patients/new.html.erb within layouts/application (11.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2016-10-26 13:52:52 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 336ms (Views: 326.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-10-26 13:52:55 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (381.0ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 425ms (Views: 423.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-10-26 13:52:59 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DyIN69geN5TzdW0Qvh7bD2HZRqW0hPfj/bwS15bEGw0QeywKJhp8oU/7AdufuinyjCTJBNvSj/OSLQR3HhPABQ==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/patients
+Completed 302 Found in 99ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 13:52:59 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [3 times] (4.1ms)
+  Rendered patients/index.html.erb within layouts/application (25.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 76ms (Views: 58.9ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-26 13:53:02 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (19.5ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (25.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 69.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/appointments" for ::1 at 2016-10-26 13:53:03 -0700
+Processing by AppointmentsController#index as HTML
+Completed 406 Not Acceptable in 95ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (AppointmentsController#index is missing a template for this request format and variant.
+
+request.formats: ["text/html"]
+request.variant: []
+
+NOTE! For XHR/Ajax or API requests, this action would normally respond with 204 No Content: an empty white screen. Since you're loading it in a web browser, we assume that you expected to actually render a template, not… nothing, so we're showing an error to be extra-clear. If you expect 204 No Content, carry on. That's what you'll get from an XHR or API request. Give it a shot.):
+  
+actionpack (5.0.0) lib/action_controller/metal/implicit_render.rb:56:in `default_render'
+actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `block in send_action'
+actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `tap'
+actionpack (5.0.0) lib/action_controller/metal/basic_implicit_render.rb:4:in `send_action'
+actionpack (5.0.0) lib/abstract_controller/base.rb:188:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.0.0) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+activesupport (5.0.0) lib/active_support/callbacks.rb:126:in `call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:506:in `block (2 levels) in compile'
+activesupport (5.0.0) lib/active_support/callbacks.rb:455:in `call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:101:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_process_action_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/abstract_controller/callbacks.rb:19:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.0) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.0) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.0) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.0) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.0) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.0) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.0) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.0) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.0) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.0) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.0) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.0) lib/action_dispatch/routing/route_set.rb:725:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.0) lib/active_record/migration.rb:552:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.0) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.0) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.0) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.0) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (65.0ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (51.1ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (95.1ms)
+Started GET "/calendar" for ::1 at 2016-10-26 13:53:04 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (22.5ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (27.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 91ms (Views: 88.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendar?start_date=2016-09-25" for ::1 at 2016-10-26 13:53:48 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-09-25"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (17.7ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/calendar?start_date=2016-10-03" for ::1 at 2016-10-26 13:53:49 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-03"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (21.0ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (24.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 71ms (Views: 68.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendar?start_date=2016-11-07" for ::1 at 2016-10-26 13:53:51 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-11-07"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (18.4ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (22.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 66.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/calendar?start_date=2016-10-30" for ::1 at 2016-10-26 13:53:52 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-30"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (34.5ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (37.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 91ms (Views: 89.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 13:53:53 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [3 times] (2.7ms)
+  Rendered patients/index.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 66ms (Views: 63.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 13:53:55 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (18.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 73ms (Views: 67.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 13:55:02 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 13:55:14 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 13:55:51 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (20.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 218ms (Views: 145.4ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 13:56:24 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 45.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 13:59:43 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+  
+ArgumentError (Unknown key: :dependant. Valid keys are: :class_name, :anonymous_class, :foreign_key, :validate, :autosave, :table_name, :before_add, :after_add, :before_remove, :after_remove, :extend, :primary_key, :dependent, :as, :through, :source, :source_type, :inverse_of, :counter_cache, :join_table, :foreign_type, :index_errors):
+  
+app/models/patient.rb:3:in `<class:Patient>'
+app/models/patient.rb:1:in `<top (required)>'
+app/controllers/patients_controller.rb:12:in `show'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.0ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (79.5ms)
+Started GET "/patients/1" for ::1 at 2016-10-26 13:59:55 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `attorney' for nil:NilClass):
+  
+app/controllers/patients_controller.rb:13:in `show'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (84.4ms)
+Started GET "/patients/1" for ::1 at 2016-10-26 14:00:06 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `attorney' for nil:NilClass):
+  
+app/controllers/patients_controller.rb:13:in `show'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (86.5ms)
+Started GET "/patients/1" for ::1 at 2016-10-26 14:00:15 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 54.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:01:07 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 52.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 14:01:09 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.5ms)
+  Rendered patients/new.html.erb within layouts/application (280.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 333ms (Views: 320.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2016-10-26 14:05:43 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (16.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 56ms (Views: 52.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:05:46 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [3 times] (2.9ms)
+  Rendered patients/index.html.erb within layouts/application (30.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 85ms (Views: 76.4ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-26 14:05:47 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (20.1ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (24.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 78ms (Views: 75.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 14:10:19 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  Rendered patients/new.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 59.5ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 14:10:20 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t+sOheFrNGf/3jofaSfiC5FkKHlriPz/0BEK4yejUrlsf5iEfy4s/q42tAlyy7N4H03TUelHV7irnxs3ug5iGg==", "patient"=>{"name"=>"", "address"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (11.9ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (1.7ms)
+  Rendered patients/new.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 56.3ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:13:03 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [3 times] (3.6ms)
+  Rendered patients/index.html.erb within layouts/application (16.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (11.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 74.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 14:13:06 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (9.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (8.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 79ms (Views: 54.6ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 14:13:46 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 14:13:48 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bYEipAPDt6W4kCWP6odtvUHpAA4wmKjn8fvWM+aoD362FbSlnYavPOl4q5nxazzOz8D7JrJXA6CKdcfnewU/3Q==", "patient"=>{"name"=>"", "address"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (1.1ms)
+  Rendered patients/new.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 50.5ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 14:13:57 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/cvxHErwlQXVPULSiV/62LRu8RP/Pud+TBnc2Smsx54mX2cd1LWNnITVzMSSs6urOkcKO33xTDk3l80NtAH3PQ==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.8ms)
+  Rendered patients/new.html.erb within layouts/application (10.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 61.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 14:14:06 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"foDNmU2gAfkAt3nlitKLiuEuPVvwpARcnHYKGI/Q8XqlFFuY0+UZYFFf9/ORPtr5bwfGc3Jrrxvn+BvMEn3B2Q==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"111-11-2345", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"Test", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "111-11-2345"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.6ms)
+  Rendered patients/new.html.erb within layouts/application (13.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 56.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 14:15:05 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NYRO7w6FpyF6+yZpZFDq40NzXQOH93y9cARNOlJ9WGHuENjukMC/uCsTqH9/vLuQzVqmKwU41/oLilzuz9Bowg==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"111-11-2345", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"Test", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "111-11-2345"], ["LIMIT", 1]]
+  [1m[35mSQL (4.2ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Patient"], ["address", ""], ["phone", ""], ["ssn", "111-11-2345"], ["dob", ""], ["employer", ""], ["claim_number", ""], ["panel_number", ""], ["wcab_number", ""], ["notes", ""], ["created_at", 2016-10-26 21:15:05 UTC], ["updated_at", 2016-10-26 21:15:05 UTC]]
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Test"], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 4], ["created_at", 2016-10-26 21:15:05 UTC], ["updated_at", 2016-10-26 21:15:05 UTC]]
+  [1m[35m (63.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/4
+Completed 302 Found in 103ms (ActiveRecord: 71.0ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 14:15:05 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 52.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 14:15:49 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 58.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 14:16:03 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 14:16:24 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (10.0ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `attorney' for #<Patient:0x007ff9cf2d71e0>
+Did you mean?  attorneys
+               attorneys=):
+    42: 
+    43:     <section class="patient_attorney_info">
+    44:       <h4>Attorneys:</h4>
+    45:       <p>Name: <%= @patient.attorney.name %></p>
+    46:       
+    47: 
+    48: 
+  
+app/views/patients/show.html.erb:45:in `_app_views_patients_show_html_erb__3093039141640583230_70355467498300'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (57.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (75.4ms)
+Started GET "/patients/4" for ::1 at 2016-10-26 14:17:58 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms)
+
+
+  
+SyntaxError (/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:47: syntax error, unexpected '<'
+      <p>Name: <%= @patient.attorney...
+       ^
+/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:47: syntax error, unexpected ':', expecting ')'
+      <p>Name: <%= @patient.attorneys.name ...
+              ^
+/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:56: syntax error, unexpected keyword_end, expecting ')'):
+  
+app/views/patients/show.html.erb:47: syntax error, unexpected '<'
+app/views/patients/show.html.erb:47: syntax error, unexpected ':', expecting ')'
+app/views/patients/show.html.erb:54: syntax error, unexpected keyword_ensure, expecting ')'
+app/views/patients/show.html.erb:56: syntax error, unexpected keyword_end, expecting ')'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (73.6ms)
+Started GET "/patients/4" for ::1 at 2016-10-26 14:18:10 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 14:18:28 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered patients/show.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 3.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `firm' for #<Attorney::ActiveRecord_Associations_CollectionProxy:0x007ff9d16f2318>
+Did you mean?  from):
+    44:       <h4>Attorneys:</h4>
+    45: 
+    46:       <%= %>
+    47:       <p>Name: <%= @patient.attorneys.firm %></p>
+    48:       
+    49: 
+    50: 
+  
+app/views/patients/show.html.erb:47:in `_app_views_patients_show_html_erb__3093039141640583230_70355468585660'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (78.4ms)
+Started GET "/patients/4" for ::1 at 2016-10-26 14:20:03 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered patients/show.html.erb within layouts/application (11.3ms)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `firm' for #<Attorney::ActiveRecord_Associations_CollectionProxy:0x007ff9d2515558>
+Did you mean?  from):
+    43:     <section class="patient_attorney_info">
+    44:       <h4>Attorneys:</h4>
+    45: 
+    46:       <p>Name: <%= @patient.attorneys.firm %></p>
+    47:       
+    48: 
+    49: 
+  
+app/views/patients/show.html.erb:46:in `_app_views_patients_show_html_erb__3093039141640583230_70355476146460'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.8ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from render_for_default_application at /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:92)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (79.4ms)
+Started GET "/patients" for ::1 at 2016-10-26 14:20:04 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.8ms)
+  Rendered patients/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 64.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:20:07 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.3ms)
+  Rendered patients/index.html.erb within layouts/application (5.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:21:40 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 3]]
+  Rendered patients/show.html.erb within layouts/application (7.2ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 3.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `firm' for #<ActiveRecord::Associations::CollectionProxy []>
+Did you mean?  from):
+    43:     <section class="patient_attorney_info">
+    44:       <h4>Attorneys:</h4>
+    45: 
+    46:       <p>Name: <%= @patient.attorneys.firm %></p>
+    47:       
+    48: 
+    49: 
+  
+app/views/patients/show.html.erb:46:in `_app_views_patients_show_html_erb__3093039141640583230_70355490954340'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.1ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.1ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (76.2ms)
+Started GET "/patients/3" for ::1 at 2016-10-26 14:21:47 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (14.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 54.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:21:58 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (3.3ms)
+  Rendered patients/index.html.erb within layouts/application (7.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 56.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:21:59 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:22:46 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mPatient Load (0.8ms)[0m  [1m[34mSELECT "patients".* FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  [1m[36mAttorney Load (0.4ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+Started GET "/patients/1" for ::1 at 2016-10-26 14:38:28 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/patients/show.html.erb:58: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/patients/show.html.erb:60: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.6ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (85.2ms)
+Started GET "/patients/1" for ::1 at 2016-10-26 14:38:37 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `attorney' for #<Patient:0x007ff9d25454d8>
+Did you mean?  attorneys
+               attorneys=):
+    42: 
+    43:     <section class="patient_attorney_info">
+    44:       <h4>Attorneys:</h4>
+    45:       <% @patient.attorney.each do |attorney| %>
+    46: 
+    47:       <p>Name: <%= attorney.name %></p>
+    48:       <% end %>
+  
+app/views/patients/show.html.erb:45:in `_app_views_patients_show_html_erb__3093039141640583230_70355490243800'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.6ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from render_for_default_application at /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:92)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (77.5ms)
+Started GET "/patients/1" for ::1 at 2016-10-26 14:38:46 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 1]]
+  Rendered patients/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 43.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:39:23 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 1]]
+  Rendered patients/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:39:34 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 1]]
+  Rendered patients/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:40:32 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 1]]
+  Rendered patients/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 45ms (Views: 42.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:41:34 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 46.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:41:43 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.6ms)
+  Rendered patients/index.html.erb within layouts/application (6.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:41:44 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.4ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 3]]
+  Rendered patients/show.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 56ms (Views: 52.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:43:46 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  Rendered patients/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/views/patients/show.html.erb:64: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/patients/show.html.erb:62: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/patients/show.html.erb:64: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.8ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (85.7ms)
+Started GET "/patients" for ::1 at 2016-10-26 14:44:16 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.6ms)
+  Rendered patients/index.html.erb within layouts/application (8.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:44:36 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (3.4ms)
+  Rendered patients/index.html.erb within layouts/application (19.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (17.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 85ms (Views: 71.5ms | ActiveRecord: 7.9ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 14:44:39 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (17.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 89ms (Views: 62.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:44:41 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 3], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 54.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:45:00 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 3], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 58.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:45:13 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 3]]
+  Rendered patients/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:51:15 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 3], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (6.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 59.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:56:00 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 3], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (13.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 76ms (Views: 54.3ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:56:02 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 3], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/3/edit" for ::1 at 2016-10-26 14:57:51 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.6ms)
+  Rendered patients/edit.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 56ms (Views: 52.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 14:57:54 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 62.0ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 14:58:12 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 14:58:14 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5wtq667ZavSO6lKjKJnAN9KP6CO+Ch/pChG70fx3UAo8n/zqMJxybd8C3LUzdZFEXKYTCzzFtK5xn6oFYdpgqQ==", "patient"=>{"name"=>"", "address"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.6ms)
+  Rendered patients/new.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 59ms (Views: 53.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 14:58:29 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"j0/L90ovSUitTmIrv0RON8hQSHi69nC267siqyjsJ4RU21321GpR0fym7D2kqB9ERnmzUDg52/GQNTN/tUEXJw==", "patient"=>{"name"=>"Field Test", "address"=>"", "phone"=>"", "ssn"=>"000121234", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"Attorney Test", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "000121234"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Field Test"], ["address", ""], ["phone", ""], ["ssn", "000121234"], ["dob", ""], ["employer", ""], ["claim_number", ""], ["panel_number", ""], ["wcab_number", ""], ["notes", ""], ["created_at", 2016-10-26 21:58:29 UTC], ["updated_at", 2016-10-26 21:58:29 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Attorney Test"], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 5], ["created_at", 2016-10-26 21:58:29 UTC], ["updated_at", 2016-10-26 21:58:29 UTC]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/5
+Completed 302 Found in 13ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 14:58:29 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.3ms)
+  Rendered patients/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:58:36 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [5 times] (3.3ms)
+  Rendered patients/index.html.erb within layouts/application (8.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 54.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 14:58:37 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 3], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2016-10-26 14:58:40 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 51ms (Views: 49.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 14:58:42 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [5 times] (3.6ms)
+  Rendered patients/index.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 54.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 14:58:43 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 67ms (Views: 63.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 14:59:43 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.6ms)
+  Rendered patients/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 15:00:35 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.3ms)
+  Rendered patients/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 60ms (Views: 56.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 15:00:51 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (3.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 46.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 15:01:05 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.6ms)
+  Rendered patients/new.html.erb within layouts/application (11.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 58.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 15:02:04 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [5 times] (3.0ms)
+  Rendered patients/index.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (12.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 64.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 15:02:05 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.7ms)
+  Rendered patients/show.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 59.8ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 15:04:28 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.7ms)
+
+
