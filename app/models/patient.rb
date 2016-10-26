@@ -3,8 +3,7 @@ class Patient < ApplicationRecord
 	has_many :attorneys
 	has_many :adjusters 
 	validates :ssn, uniqueness: true
-	accepts_nested_attributes_for :attorneys, :adjusters
-	
+	accepts_nested_attributes_for :attorneys
 
 	def self.search(search)
 	  if search

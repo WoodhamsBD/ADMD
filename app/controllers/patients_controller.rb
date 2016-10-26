@@ -14,8 +14,8 @@ class PatientsController < ApplicationController
 
 	def new
 		@patient = Patient.new
-		attorney = @patient.build_attorney
-		adjuster = @patient.build_adjuster
+		@patient.attorneys.build
+		@patient.adjusters.build
 	end
 
 	def create
@@ -53,7 +53,7 @@ class PatientsController < ApplicationController
 	private
 
 	def patient_params
-		params.require(:patient).permit(:name, :address, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes, attorney_attributes: [:name, :firm, :address, :phone, :fax], adjuster_attributes: [:name, :agency, :address, :phone, :fax])
+		params.require(:patient).permit(:name, :address, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes, attorneys_attributes: [:name, :firm, :address, :phone, :fax], adjusters_attributes: [:name, :agency, :address, :phone, :fax])
 	end
 
 

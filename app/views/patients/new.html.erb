@@ -39,25 +39,25 @@
       </div>
 
       <div class="col-md-5 col-md-offset-1 patient_intake">
-        <%= f.fields_for :attorney do |a| %>
-            <%= a.label :Attorney %>
-            <%= a.text_field :name, class: 'form-control' %>
+        <%= f.fields_for :attorneys do |attorney_builder| %>
+            <%= attorney_builder.label :Attorney %>
+            <%= attorney_builder.text_field :name, class: 'form-control' %>
 
-            <%= a.label :firm %>
-            <%= a.text_field :firm, class: 'form-control' %>
+            <%= attorney_builder.label :firm %>
+            <%= attorney_builder.text_field :firm, class: 'form-control' %>
 
-            <%= a.label :address %>
-            <%= a.text_field :address, class: 'form-control' %>
+            <%= attorney_builder.label :address %>
+            <%= attorney_builder.text_field :address, class: 'form-control' %>
 
-            <%= a.label :phone %>
-            <%= a.text_field :phone, class: 'form-control' %>
+            <%= attorney_builder.label :phone %>
+            <%= attorney_builder.text_field :phone, class: 'form-control' %>
 
-            <%= a.label :fax %>
-            <%= a.text_field :fax, class: 'form-control' %>
+            <%= attorney_builder.label :fax %>
+            <%= attorney_builder.text_field :fax, class: 'form-control' %>
         <% end %>
 
         <br>
-        <%= f.fields_for :adjuster do |aj| %>
+        <%= f.fields_for :adjusters do |aj| %>
           <%= aj.label :Adjuster %>
           <%= aj.text_field :name, class: 'form-control' %>
 
@@ -78,7 +78,6 @@
 
   </div>
 </div>
-
 <div class="row"> 
   <div class="col-md-3 col-md-offset-2">
   <%= f.submit "Save this Patient", class: "btn btn-primary" %>
