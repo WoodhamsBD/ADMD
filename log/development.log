@@ -26032,3 +26032,1818 @@ Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 0.8ms)
 
   [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
   [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 6]]
+Started GET "/patients/6/edit" for ::1 at 2016-10-26 17:54:42 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 6], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 6], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 6]]
+  Rendered attorneys/_edit_attorney.html.erb (27.8ms)
+  Rendered attorneys/_edit_attorney.html.erb (21.5ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.0ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.1ms)
+  Rendered attorneys/_edit_attorney.html.erb (18.8ms)
+  Rendered attorneys/_edit_attorney.html.erb (18.7ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.2ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.1ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.1ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.1ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.0ms)
+  Rendered attorneys/_edit_attorney.html.erb (18.5ms)
+  Rendered attorneys/_edit_attorney.html.erb (22.2ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.4ms)
+  Rendered attorneys/_edit_attorney.html.erb (18.7ms)
+  Rendered attorneys/_edit_attorney.html.erb (23.5ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.4ms)
+  Rendered attorneys/_edit_attorney.html.erb (19.5ms)
+  Rendered attorneys/_edit_attorney.html.erb (24.8ms)
+  Rendered attorneys/_edit_attorney.html.erb (24.0ms)
+  Rendered patients/edit.html.erb within layouts/application (439.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 484ms (Views: 480.0ms | ActiveRecord: 1.1ms)
+
+
+Started DELETE "/patients/6" for ::1 at 2016-10-26 17:55:02 -0700
+Processing by PatientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1p5nBIQTRUkG4Z2QYSjFa83LUzjoNe2MWsrWAz9JookNCvEFGlZd0FcJE4Z6xJQYQ+KoEGr6RsshRMfXouSSKg==", "id"=>"6"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 6]]
+  [1m[35mSQL (1.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 6]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 7]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 8]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 9]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 10]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 11]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 12]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 13]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 14]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 15]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 16]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 17]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 18]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 19]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 20]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 21]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 22]]
+  [1m[35mSQL (3.8ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users
+Completed 302 Found in 20ms (ActiveRecord: 9.0ms)
+
+
+Started GET "/users" for ::1 at 2016-10-26 17:55:02 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of users/_user.html.erb [1 times] (0.7ms)
+  Rendered users/index.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 49ms (Views: 45.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for ::1 at 2016-10-26 17:55:43 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of users/_user.html.erb [1 times] (0.8ms)
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 50ms (Views: 40.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 17:55:45 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [5 times] (4.2ms)
+  Rendered patients/index.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 64ms (Views: 57.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/patients/5" for ::1 at 2016-10-26 17:55:46 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 5], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 5], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 56.0ms | ActiveRecord: 2.8ms)
+
+
+Started DELETE "/patients/5" for ::1 at 2016-10-26 17:55:48 -0700
+Processing by PatientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"87fshwuz+qq2Ue3tFroRWbljXJrYhV8xyZ+AcdvGOmooI3qGlfbiM+e5Y/sNVkAqN0qnslpK9HayEZGlRmsKyQ==", "id"=>"5"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttorney Load (0.1ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 5]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients
+Completed 302 Found in 5ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 17:55:48 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (3.3ms)
+  Rendered patients/index.html.erb within layouts/application (8.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 45.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 17:58:00 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.8ms)
+  Rendered patients/index.html.erb within layouts/application (13.2ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/config
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/images
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/javascripts
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/stylesheets
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/vendor/assets/javascripts
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/vendor/assets/stylesheets
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/assets/stylesheets
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /Users/bryanwoodhams/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/actioncable-5.0.0/lib/assets/compiled
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/stylesheets
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/javascripts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/fonts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/images
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/stylesheets):
+    3:   <head>
+    4:     <title><%= yield(:title) %> | ADMD</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    8:   </head>
+    9: 
+  
+app/assets/stylesheets/table.scss:1
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___3046012817449735410_70355404417460'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (40.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (82.7ms)
+Started GET "/patients" for ::1 at 2016-10-26 18:01:15 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.9ms)
+  Rendered patients/index.html.erb within layouts/application (23.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (16.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 1933ms (Views: 1912.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/patients/2" for ::1 at 2016-10-26 18:01:27 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 78ms (Views: 55.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/patients/2" for ::1 at 2016-10-26 18:02:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (24.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 410ms (Views: 361.5ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/patients/2" for ::1 at 2016-10-26 18:05:25 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 150ms (Views: 143.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients/2" for ::1 at 2016-10-26 18:05:43 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 130ms (Views: 126.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-26 18:05:45 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (315.7ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (319.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 365ms (Views: 362.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-26 18:06:11 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (13.4ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (15.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 102.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-26 18:06:13 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (15.9ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (18.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 60ms (Views: 58.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-26 18:06:28 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (17.4ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (19.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 59.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendar?start_date=2016-11-07" for ::1 at 2016-10-26 18:07:04 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-11-07"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (18.6ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (21.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 69ms (Views: 67.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/calendar?start_date=2016-10-30" for ::1 at 2016-10-26 18:07:05 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-30"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (22.7ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (26.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendar?start_date=2016-10-30" for ::1 at 2016-10-26 18:07:31 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-30"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (19.0ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (22.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/calendar?start_date=2016-10-30" for ::1 at 2016-10-26 18:08:42 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-30"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (276.9ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (281.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (28.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 640ms (Views: 627.1ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/calendar?start_date=2016-10-30" for ::1 at 2016-10-26 18:08:54 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-30"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (22.3ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (25.2ms)
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (File to import not found or unreadable: compass/css3.
+Load paths:
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/config
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/images
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/javascripts
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/app/assets/stylesheets
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/vendor/assets/javascripts
+  /Users/bryanwoodhams/WorkSpace/OfficeApp/ADMD/vendor/assets/stylesheets
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/assets/stylesheets
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/jquery-rails-4.1.1/vendor/assets/javascripts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/coffee-rails-4.2.1/lib/assets/javascripts
+  /Users/bryanwoodhams/.rvm/rubies/ruby-2.3.1/lib/ruby/gems/2.3.0/gems/actioncable-5.0.0/lib/assets/compiled
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/turbolinks-source-5.0.0/lib/assets/javascripts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/stylesheets
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/javascripts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/fonts
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/images
+  /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/bootstrap-sass-3.3.6/assets/stylesheets):
+    3:   <head>
+    4:     <title><%= yield(:title) %> | ADMD</title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    7:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    8:   </head>
+    9: 
+  
+app/assets/stylesheets/table.scss:1
+app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb__3757913212755424945_70174109733560'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.9ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from render_for_default_application at /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/debug_exceptions.rb:92)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (46.9ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (89.9ms)
+Started GET "/calendar?start_date=2016-10-30" for ::1 at 2016-10-26 18:09:02 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-30"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (22.5ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (25.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 113ms (Views: 111.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/calendar?start_date=2016-10-30" for ::1 at 2016-10-26 18:09:08 -0700
+Processing by StaticPagesController#calendar as HTML
+  Parameters: {"start_date"=>"2016-10-30"}
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (19.7ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (22.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 126ms (Views: 124.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 18:09:14 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (3.5ms)
+  Rendered patients/index.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 62.9ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 18:09:16 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.7ms)
+  Rendered patients/show.html.erb within layouts/application (25.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 94ms (Views: 66.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/patients/4/edit" for ::1 at 2016-10-26 18:09:17 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered attorneys/_edit_attorney.html.erb (4.4ms)
+  Rendered patients/edit.html.erb within layouts/application (22.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 65.2ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/patients/4" for ::1 at 2016-10-26 18:09:25 -0700
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aRvZ9GuBCqckEytr/64amiViAkxM1DDafpO04ROKRQAeqB88xw/bVi1EYDFBIYRBjWJhF9NZXfeLWKzhGhPVhQ==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"111-11-2345", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>""}, "commit"=>"Save these updates", "id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 AND ("patients"."id" != $2) LIMIT $3[0m  [["ssn", "111-11-2345"], ["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/4
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 18:09:25 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.3ms)
+  Rendered patients/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 43.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 18:09:28 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.3ms)
+  Rendered patients/show.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 47ms (Views: 43.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/4/edit" for ::1 at 2016-10-26 18:09:29 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.5ms)
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered attorneys/_edit_attorney.html.erb (3.0ms)
+  Rendered patients/edit.html.erb within layouts/application (11.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 61.1ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/patients/4" for ::1 at 2016-10-26 18:09:35 -0700
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0QXQDzcq29VVft3PjQJ6Rh/sThxxcEiknvhU0zCxSeSmthbHm6QKJFwplpUzjeSdt+wtR+79JYlrM0zTOSjZYQ==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"111-11-2345", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>""}, "commit"=>"Save these updates", "id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 AND ("patients"."id" != $2) LIMIT $3[0m  [["ssn", "111-11-2345"], ["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/4
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 18:09:35 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 58.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 18:10:55 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (12.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (19.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 96ms (Views: 72.5ms | ActiveRecord: 7.7ms)
+
+
+Started GET "/patients/4/edit" for ::1 at 2016-10-26 18:10:57 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered attorneys/_edit_attorney.html.erb (3.4ms)
+  Rendered patients/edit.html.erb within layouts/application (24.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 78ms (Views: 74.7ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/patients/4" for ::1 at 2016-10-26 18:11:00 -0700
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sPH7jzCC5JwQFv9bVZqrLbdnzHS3d2vlbcIw30WmxBXHQj1HnAw1bRlBtAHrFTX2H2evLyj6BsiYCSjfTD9UkA==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"111-11-2345", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>""}, "commit"=>"Save these updates", "id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 AND ("patients"."id" != $2) LIMIT $3[0m  [["ssn", "111-11-2345"], ["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/4
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 18:11:00 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.3ms)
+  Rendered patients/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 51.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/patients/4/edit" for ::1 at 2016-10-26 19:18:03 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  [1m[36mAttorney Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.1ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered attorneys/_edit_attorney.html.erb (2.9ms)
+  Rendered patients/edit.html.erb within layouts/application (312.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (20.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 743ms (Views: 698.5ms | ActiveRecord: 8.1ms)
+
+
+Started PATCH "/patients/4" for ::1 at 2016-10-26 19:18:10 -0700
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6Vx69+qP8US6IqUhFJsJimd2bomvRZe3Z6TdLUQ6n4Oe77w/RgEgtbN17nuqFJdRz3YN0jDI+pqSb8UtTaMPBg==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"111-11-2345", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>""}, "commit"=>"Save these updates", "id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 AND ("patients"."id" != $2) LIMIT $3[0m  [["ssn", "111-11-2345"], ["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/4
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 19:18:10 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.6ms)
+  Rendered patients/show.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 54ms (Views: 50.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 19:18:13 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 81ms (Views: 77.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:18:18 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (3.3ms)
+  Rendered patients/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 77ms (Views: 74.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 19:18:19 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.6ms)
+  Rendered patients/show.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 65ms (Views: 60.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients/4/edit" for ::1 at 2016-10-26 19:18:21 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered attorneys/_edit_attorney.html.erb (1.9ms)
+  Rendered patients/edit.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 56.9ms | ActiveRecord: 1.1ms)
+
+
+Started PATCH "/patients/4" for ::1 at 2016-10-26 19:18:27 -0700
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"glOUxY8CmfKJ89YGtUjcrs4gfxj5dn/k2RIvP2LLxIr14FINI4xIA4CknVwLx0J1ZiAcQ2b7Esks2Tc/a1JUDw==", "patient"=>{"name"=>"Patient", "address"=>"", "phone"=>"", "ssn"=>"111-11-2345", "dob"=>"10-15-1987", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>""}, "commit"=>"Save these updates", "id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 AND ("patients"."id" != $2) LIMIT $3[0m  [["ssn", "111-11-2345"], ["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "patients" SET "dob" = $1, "updated_at" = $2 WHERE "patients"."id" = $3[0m  [["dob", "10-15-1987"], ["updated_at", 2016-10-27 02:18:27 UTC], ["id", 4]]
+  [1m[35m (66.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/4
+Completed 302 Found in 72ms (ActiveRecord: 67.0ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 19:18:27 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 48ms (Views: 44.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 19:18:29 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 42.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/4/edit" for ::1 at 2016-10-26 19:18:30 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 4]]
+  Rendered attorneys/_edit_attorney.html.erb (1.9ms)
+  Rendered patients/edit.html.erb within layouts/application (9.7ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 53.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/calendar" for ::1 at 2016-10-26 19:18:34 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (18.1ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (22.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 64.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:18:39 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.9ms)
+  Rendered patients/index.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 53.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 19:18:40 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 49.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients?utf8=%E2%9C%93&search=Test" for ::1 at 2016-10-26 19:18:44 -0700
+Processing by PatientsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Test"}
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients" WHERE (name LIKE '%Test%')[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE (name LIKE '%Test%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of templates [0 times] (0.0ms)
+  Rendered patients/index.html.erb within layouts/application (8.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 55ms (Views: 47.0ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/patients?utf8=%E2%9C%93&search=test" for ::1 at 2016-10-26 19:18:48 -0700
+Processing by PatientsController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"test"}
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients" WHERE (name LIKE '%test%')[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE (name LIKE '%test%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [1 times] (1.1ms)
+  Rendered patients/index.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 45ms (Views: 42.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 19:19:06 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  Rendered patients/new.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (8.4ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 19:22:16 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (12.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 114ms (Views: 74.3ms | ActiveRecord: 8.3ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 19:22:17 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxX5UwoVwIzoVlVVPQ56BVV0cBgu58DwMqVSH7a7grGEgW9SlFDYFbm+20Mm4it2212LMKwoa7dJK0PLKxayEg==", "patient"=>{"name"=>"", "address"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "1"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.8ms)
+  Rendered patients/new.html.erb within layouts/application (16.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 72ms (Views: 64.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:22:23 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.8ms)
+  Rendered patients/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/patients" for ::1 at 2016-10-26 19:22:32 -0700
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XxX5UwoVwIzoVlVVPQ56BVV0cBgu58DwMqVSH7a7grGEgW9SlFDYFbm+20Mm4it2212LMKwoa7dJK0PLKxayEg==", "patient"=>{"name"=>"Alison Mittelberger", "address"=>"2905 Dwight Way", "phone"=>"2078372794", "ssn"=>"11", "dob"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "1"=>{"name"=>"", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: adjusters
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "11"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Alison Mittelberger"], ["address", "2905 Dwight Way"], ["phone", "2078372794"], ["ssn", "11"], ["dob", ""], ["employer", ""], ["claim_number", ""], ["panel_number", ""], ["wcab_number", ""], ["notes", ""], ["created_at", 2016-10-27 02:22:32 UTC], ["updated_at", 2016-10-27 02:22:32 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 7], ["created_at", 2016-10-27 02:22:32 UTC], ["updated_at", 2016-10-27 02:22:32 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 7], ["created_at", 2016-10-27 02:22:32 UTC], ["updated_at", 2016-10-27 02:22:32 UTC]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/7
+Completed 302 Found in 13ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/patients/7" for ::1 at 2016-10-26 19:22:32 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 7], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (6.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 51.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:22:38 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [5 times] (3.4ms)
+  Rendered patients/index.html.erb within layouts/application (7.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/7" for ::1 at 2016-10-26 19:22:39 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 7], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (4.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 51.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/7/edit" for ::1 at 2016-10-26 19:22:40 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 7]]
+  Rendered attorneys/_edit_attorney.html.erb (3.8ms)
+  Rendered attorneys/_edit_attorney.html.erb (3.0ms)
+  Rendered patients/edit.html.erb within layouts/application (17.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/patients/7" for ::1 at 2016-10-26 19:22:56 -0700
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANstRaaKN69UB+NUGkIRqwqY23LyATtZwqMHq+8Si5IZeVJbvmxkuhF/KXtyyRkRMekfTYX8vwSJmxPBEuc8gw==", "patient"=>{"name"=>"Alison Mittelberger", "address"=>"2905 Dwight Way", "phone"=>"2078372794", "ssn"=>"11", "dob"=>"7/7/1991", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>""}, "commit"=>"Save these updates", "id"=>"7"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 AND ("patients"."id" != $2) LIMIT $3[0m  [["ssn", "11"], ["id", 7], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "patients" SET "dob" = $1, "updated_at" = $2 WHERE "patients"."id" = $3[0m  [["dob", "7/7/1991"], ["updated_at", 2016-10-27 02:22:56 UTC], ["id", 7]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/7
+Completed 302 Found in 12ms (ActiveRecord: 6.6ms)
+
+
+Started GET "/patients/7" for ::1 at 2016-10-26 19:22:56 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 7], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/7/edit" for ::1 at 2016-10-26 19:23:05 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 7]]
+  Rendered attorneys/_edit_attorney.html.erb (3.0ms)
+  Rendered attorneys/_edit_attorney.html.erb (2.7ms)
+  Rendered patients/edit.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 66.6ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/patients/7" for ::1 at 2016-10-26 19:23:20 -0700
+Processing by PatientsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47JaLnP+wdRWoZaGln9im/BAA2YO4V1F9dUUPMGTL2D6ECUwaxiSwRPZXKn+9GohyzHHWXkc2Ri+7QBWPGaYcQ==", "patient"=>{"name"=>"Alison Mittelberger", "address"=>"2905 Dwight Way", "phone"=>"2078372794", "ssn"=>"11", "dob"=>"7/7/1991", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>""}, "commit"=>"Save these updates", "id"=>"7"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 AND ("patients"."id" != $2) LIMIT $3[0m  [["ssn", "11"], ["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/7
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/7" for ::1 at 2016-10-26 19:23:20 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 7], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.6ms)
+  Rendered patients/show.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 49.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/7/edit" for ::1 at 2016-10-26 19:23:21 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.5ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 7]]
+  Rendered attorneys/_edit_attorney.html.erb (7.5ms)
+  Rendered attorneys/_edit_attorney.html.erb (5.3ms)
+  Rendered patients/edit.html.erb within layouts/application (26.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 1.0ms)
+
+
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 7]]
+  [1m[36mAttorney Load (0.5ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys"[0m
+Started DELETE "/patients/7" for ::1 at 2016-10-26 19:24:16 -0700
+Processing by PatientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"timW2K4gvjufNUFRgWVIoq+0aEMY1kAeMr6NCarokpptvQDZMGWmos7dz0eaiRnRIZ2Ta5oZ61lJMJzdN0WiOQ==", "id"=>"7"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 7]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 23]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 24]]
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients
+Completed 302 Found in 7ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:24:16 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (2.3ms)
+  Rendered patients/index.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mAttorney Load (0.4ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys"[0m
+Started GET "/patients/7" for ::1 at 2016-10-26 19:24:30 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPatient Load (1.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 1.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=7):
+  
+app/controllers/patients_controller.rb:12:in `show'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.1ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (80.7ms)
+Started GET "/calendar" for ::1 at 2016-10-26 19:24:40 -0700
+Processing by StaticPagesController#calendar as HTML
+  Rendering static_pages/calendar.html.erb within layouts/application
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/simple_calendar-2.2.0/app/views/simple_calendar/_month_calendar.html.erb (18.2ms)
+  Rendered static_pages/calendar.html.erb within layouts/application (21.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 69ms (Views: 67.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 19:24:43 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.5ms)
+  Rendered patients/new.html.erb within layouts/application (12.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 66ms (Views: 61.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:24:45 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [4 times] (3.2ms)
+  Rendered patients/index.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 55.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 19:24:46 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/3" for ::1 at 2016-10-26 19:24:50 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 3], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 48ms (Views: 43.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients/4" for ::1 at 2016-10-26 19:24:52 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 4], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (4.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 55.4ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (219.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ADMD_development"[0m
+  [1m[35m (204.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ADMD_test"[0m
+  [1m[35m (399.6ms)[0m  [1m[35mCREATE DATABASE "ADMD_development" ENCODING = 'unicode'[0m
+  [1m[35m (250.3ms)[0m  [1m[35mCREATE DATABASE "ADMD_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2304354631489598940);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160714034040)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "remember_digest" character varying, "password_digest" character varying, "admin" boolean, "activation_digest" character varying, "activated_at" timestamp, "activated" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160714034040"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePatients (20161014191107)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "patients" ("id" serial primary key, "name" character varying, "address" character varying, "phone" character varying, "ssn" character varying, "dob" character varying, "employer" character varying, "claim_number" character varying, "panel_number" character varying, "wcab_number" character varying, "notes" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191107"]]
+  [1m[35m (4.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAdjusters (20161014191534)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE TABLE "adjusters" ("id" serial primary key, "name" character varying, "agency" character varying, "address" character varying, "phone" character varying, "fax" character varying, "patient_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191534"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAttorneys (20161014191543)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "attorneys" ("id" serial primary key, "name" character varying, "firm" character varying, "address" character varying, "phone" character varying, "fax" character varying, "patient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191543"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAppointments (20161014191847)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (21.8ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" serial primary key, "title" character varying, "office" character varying, "address" character varying, "type" character varying, "status" character varying, "patient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c63da04ab4"
+FOREIGN KEY ("patient_id")
+  REFERENCES "patients" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_patient_id" ON "appointments"  ("patient_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191847"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-27 02:26:51 UTC], ["updated_at", 2016-10-27 02:26:51 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2304354631489598940)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'adjusters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'appointments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'attorneys'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'patients'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "admin", "activation_digest", "activated_at", "activated", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example User"], ["email", "test@test.org"], ["password_digest", "$2a$10$uXwOGq4QwmLYVyHm8ZfK6eVsR2uh.X7LzGF7kDE8V/Bg.N9V1ii6C"], ["admin", true], ["activation_digest", "$2a$10$zZm6Y1KDDHio95Dhna3KSuZJXh5JQZ38GnRZcmXjI677r/5CfUo1m"], ["activated_at", 2016-10-27 02:26:51 UTC], ["activated", true], ["created_at", 2016-10-27 02:26:51 UTC], ["updated_at", 2016-10-27 02:26:51 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "000112233"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Johny Appleseed"], ["address", "1234 Silly Ave Berkeley CA 94704"], ["phone", "5551234567"], ["ssn", "000112233"], ["dob", "10/5/1991"], ["employer", "The Moving Company"], ["claim_number", "1234567890"], ["panel_number", "1234567890"], ["wcab_number", "ADJ1234567890"], ["notes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["created_at", 2016-10-27 02:26:51 UTC], ["updated_at", 2016-10-27 02:26:51 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "111222333"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Captain Blackbeard"], ["address", "1234 Silly Ave Berkeley CA 94704"], ["phone", "5551234567"], ["ssn", "111222333"], ["dob", "10/5/1991"], ["employer", "The Moving Company"], ["claim_number", "1234567890"], ["panel_number", "1234567890"], ["wcab_number", "ADJ1234567890"], ["notes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["created_at", 2016-10-27 02:26:51 UTC], ["updated_at", 2016-10-27 02:26:51 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (119.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ADMD_development"[0m
+  [1m[35m (117.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ADMD_test"[0m
+  [1m[35m (235.8ms)[0m  [1m[35mCREATE DATABASE "ADMD_development" ENCODING = 'unicode'[0m
+  [1m[35m (241.7ms)[0m  [1m[35mCREATE DATABASE "ADMD_test" ENCODING = 'unicode'[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2304354631489598940);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160714034040)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "remember_digest" character varying, "password_digest" character varying, "admin" boolean, "activation_digest" character varying, "activated_at" timestamp, "activated" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160714034040"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePatients (20161014191107)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "patients" ("id" serial primary key, "name" character varying, "address" character varying, "phone" character varying, "ssn" character varying, "dob" character varying, "employer" character varying, "claim_number" character varying, "panel_number" character varying, "wcab_number" character varying, "notes" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191107"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAdjusters (20161014191534)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "adjusters" ("id" serial primary key, "name" character varying, "agency" character varying, "address" character varying, "phone" character varying, "fax" character varying, "patient_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191534"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAttorneys (20161014191543)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "attorneys" ("id" serial primary key, "name" character varying, "firm" character varying, "address" character varying, "phone" character varying, "fax" character varying, "patient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191543"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAppointments (20161014191847)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" serial primary key, "title" character varying, "office" character varying, "address" character varying, "type" character varying, "status" character varying, "patient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c63da04ab4"
+FOREIGN KEY ("patient_id")
+  REFERENCES "patients" ("id")
+)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_patient_id" ON "appointments"  ("patient_id")[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191847"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-27 02:27:04 UTC], ["updated_at", 2016-10-27 02:27:04 UTC]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(2304354631489598940)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'adjusters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'appointments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'attorneys'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'patients'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "admin", "activation_digest", "activated_at", "activated", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example User"], ["email", "test@test.org"], ["password_digest", "$2a$10$KLETQrAksMTiDVDA1tJiEusUihue.M29vOSKLR0Uk3KLbc1wTWQza"], ["admin", true], ["activation_digest", "$2a$10$qq33H1q6fRpMGmbCbVDT6eKVQly7HxoQO8cPH/FIIkC79M/vUxH96"], ["activated_at", 2016-10-27 02:27:04 UTC], ["activated", true], ["created_at", 2016-10-27 02:27:05 UTC], ["updated_at", 2016-10-27 02:27:05 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "000112233"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Johny Appleseed"], ["address", "1234 Silly Ave Berkeley CA 94704"], ["phone", "5551234567"], ["ssn", "000112233"], ["dob", "10/5/1991"], ["employer", "The Moving Company"], ["claim_number", "1234567890"], ["panel_number", "1234567890"], ["wcab_number", "ADJ1234567890"], ["notes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["created_at", 2016-10-27 02:27:05 UTC], ["updated_at", 2016-10-27 02:27:05 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "111222333"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Captain Blackbeard"], ["address", "1234 Silly Ave Berkeley CA 94704"], ["phone", "5551234567"], ["ssn", "111222333"], ["dob", "10/5/1991"], ["employer", "The Moving Company"], ["claim_number", "1234567890"], ["panel_number", "1234567890"], ["wcab_number", "ADJ1234567890"], ["notes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["created_at", 2016-10-27 02:27:05 UTC], ["updated_at", 2016-10-27 02:27:05 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+DEPRECATION WARNING: Passing an argument to force an association to reload is now deprecated and will be removed in Rails 5.1. Please call `reload` on the result collection proxy instead. (called from reader at /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/activerecord-5.0.0/lib/active_record/associations/collection_association.rb:31)
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 2]]
+Started GET "/patients/4" for ::1 at 2016-10-26 19:27:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 24ms (ActiveRecord: 4.0ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Patient with 'id'=4):
+  
+app/controllers/patients_controller.rb:12:in `show'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (344.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (387.7ms)
+Started GET "/" for ::1 at 2016-10-26 19:27:15 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (18.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 316ms (Views: 310.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/login" for ::1 at 2016-10-26 19:27:17 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (19.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 63.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:27:19 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [2 times] (3.1ms)
+  Rendered patients/index.html.erb within layouts/application (15.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 58.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/new" for ::1 at 2016-10-26 19:27:25 -0700
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.6ms)
+  Rendered patients/new.html.erb within layouts/application (12.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 90ms (Views: 50.8ms | ActiveRecord: 4.3ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-10-26 19:27:28 -0700
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RTNBZ3N2C+G48TuKmWT5BK9GnM3XMyVxTv3NZH0gkG6ep9dm7TMTeOkZtZyCiKh3IW9n5VX8jjY1c9yw4I2gzQ=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2016-10-26 19:27:28 -0700
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 46.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:27:33 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [2 times] (1.4ms)
+  Rendered patients/index.html.erb within layouts/application (4.5ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 44ms (Views: 41.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 19:27:36 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 52.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/2" for ::1 at 2016-10-26 19:27:39 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 50.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 19:27:40 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 63ms (Views: 59.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/2" for ::1 at 2016-10-26 19:27:43 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 53ms (Views: 49.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/2/edit" for ::1 at 2016-10-26 19:27:45 -0700
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.7ms)
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/edit.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/login" for ::1 at 2016-10-26 19:27:48 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-10-26 19:27:52 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kCvqK4RzLvbp2spPA+j1UoqYp+Wqgpe8zRzcSM45tUSPcsvKendlw1VUpoQiTAevZ2UoRMXU76yijcroRu5uTA==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/patients
+Completed 302 Found in 67ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/patients" for ::1 at 2016-10-26 19:27:53 -0700
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [2 times] (1.3ms)
+  Rendered patients/index.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/2" for ::1 at 2016-10-26 19:27:54 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 58ms (Views: 53.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/1" for ::1 at 2016-10-26 19:27:55 -0700
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 50.3ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 2]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 2]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (523.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ADMD_development"[0m
+  [1m[35m (117.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ADMD_test"[0m
+  [1m[35m (238.1ms)[0m  [1m[35mCREATE DATABASE "ADMD_development" ENCODING = 'unicode'[0m
+  [1m[35m (240.2ms)[0m  [1m[35mCREATE DATABASE "ADMD_test" ENCODING = 'unicode'[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2304354631489598940);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160714034040)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "name" character varying, "email" character varying, "remember_digest" character varying, "password_digest" character varying, "admin" boolean, "activation_digest" character varying, "activated_at" timestamp, "activated" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20160714034040"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePatients (20161014191107)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "patients" ("id" serial primary key, "name" character varying, "address" character varying, "phone" character varying, "ssn" character varying, "dob" character varying, "employer" character varying, "claim_number" character varying, "panel_number" character varying, "wcab_number" character varying, "notes" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191107"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAdjusters (20161014191534)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "adjusters" ("id" serial primary key, "name" character varying, "agency" character varying, "address" character varying, "phone" character varying, "fax" character varying, "patient_id" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191534"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAttorneys (20161014191543)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "attorneys" ("id" serial primary key, "name" character varying, "firm" character varying, "address" character varying, "phone" character varying, "fax" character varying, "patient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191543"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateAppointments (20161014191847)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "appointments" ("id" serial primary key, "title" character varying, "office" character varying, "address" character varying, "type" character varying, "status" character varying, "patient_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c63da04ab4"
+FOREIGN KEY ("patient_id")
+  REFERENCES "patients" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE  INDEX  "index_appointments_on_patient_id" ON "appointments"  ("patient_id")[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20161014191847"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2016-10-27 02:28:25 UTC], ["updated_at", 2016-10-27 02:28:25 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2304354631489598940)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'adjusters'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'appointments'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'attorneys'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'patients'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'users'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "admin", "activation_digest", "activated_at", "activated", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", "Example User"], ["email", "test@test.org"], ["password_digest", "$2a$10$cr4gElTa1bQCx.96J2Ne2uFaNtpHn9QFrWgZr6X6R.VyVyhmhhJf6"], ["admin", true], ["activation_digest", "$2a$10$ED.lB7amrkCzu4z3FiSroOTIelHa0cZRAmpARPEl4qcm8mRcWk6WK"], ["activated_at", 2016-10-27 02:28:25 UTC], ["activated", true], ["created_at", 2016-10-27 02:28:25 UTC], ["updated_at", 2016-10-27 02:28:25 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "000112233"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Johny Appleseed"], ["address", "1234 Silly Ave Berkeley CA 94704"], ["phone", "5551234567"], ["ssn", "000112233"], ["dob", "10/5/1991"], ["employer", "The Moving Company"], ["claim_number", "1234567890"], ["panel_number", "1234567890"], ["wcab_number", "ADJ1234567890"], ["notes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["created_at", 2016-10-27 02:28:25 UTC], ["updated_at", 2016-10-27 02:28:25 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", "111222333"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "patients" ("name", "address", "phone", "ssn", "dob", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["name", "Captain Blackbeard"], ["address", "1234 Silly Ave Berkeley CA 94704"], ["phone", "5551234567"], ["ssn", "111222333"], ["dob", "10/5/1991"], ["employer", "The Moving Company"], ["claim_number", "1234567890"], ["panel_number", "1234567890"], ["wcab_number", "ADJ1234567890"], ["notes", "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."], ["created_at", 2016-10-27 02:28:25 UTC], ["updated_at", 2016-10-27 02:28:25 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m

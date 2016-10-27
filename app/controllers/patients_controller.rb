@@ -16,6 +16,7 @@ class PatientsController < ApplicationController
 	def new
 		@patient = Patient.new
 		@patient.attorneys.build
+		@patient.adjusters.build
 	end
 
 	def create
@@ -31,7 +32,7 @@ class PatientsController < ApplicationController
 
 	def edit
 		@patient = Patient.find(params[:id])
-		@attorneys = @patient.attorneys.paginate(page: params[:page])
+		@attorneys = @patient.attorneys
 	end
 
 	def update
@@ -47,7 +48,7 @@ class PatientsController < ApplicationController
 	def destroy
 		Patient.find(params[:id]).destroy
 		flash[:success] = "Patient Deleted"
-		redirect_to users_url
+		redirect_to patients_url
 	end
 
 
