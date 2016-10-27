@@ -6,39 +6,41 @@
 		<%= form_for(@patient) do |f| %>
       <%= render 'shared/patient_messages' %>
 
-      <div class="col-md-5 patient_intake">
-        <%= f.label :name %>
+      <div class="col-md-4 patient_intake">
+        <h2>Patient Biographical Information</h3>
+        <%= f.label :name, class: 'label-control'%>
         <%= f.text_field :name, class: 'form-control' %>
 
-        <%= f.label :address %>
+        <%= f.label :address, class: 'label-control'%>
         <%= f.text_field :address, class: 'form-control' %>
 
-        <%= f.label :phone %>
+        <%= f.label :phone, class: 'label-control'%>
         <%= f.text_field :phone, class: 'form-control' %>
 
-        <%= f.label :ssn %>
+        <%= f.label :ssn, class: 'label-control'%>
         <%= f.text_field :ssn, class: 'form-control' %>
 
-        <%= f.label :dob %>
+        <%= f.label :dob, class: 'label-control'%>
         <%= f.text_field :dob, class: 'form-control' %>
 
-        <%= f.label :employer %>
+        <%= f.label :employer, class: 'label-control'%>
         <%= f.text_field :employer, class: 'form-control' %>
 
-        <%= f.label :claim_number %>
+        <%= f.label :claim_number, class: 'label-control'%>
         <%= f.text_field :claim_number, class: 'form-control' %>
 
-        <%= f.label :panel_number %>
+        <%= f.label :panel_number, class: 'label-control'%>
         <%= f.text_field :panel_number, class: 'form-control' %>
 
-        <%= f.label :wcab_number %>
+        <%= f.label :wcab_number, class: 'label-control'%>
         <%= f.text_field :wcab_number, class: 'form-control' %>
 
-        <%= f.label :notes %>
+        <%= f.label :notes, class: 'label-control'%>
         <%= f.text_area :notes, :rows => 3, class: 'form-control' %>
       </div>
 
-      <div class="col-md-5 col-md-offset-1 patient_intake">
+      <div class="col-md-4 patient_intake attorney_creation">
+      <h2>Patient Attorneys</h2>
         <%= f.fields_for :attorneys do |attorney_builder| %>
             <%= attorney_builder.label :name %>
             <%= attorney_builder.text_field :name, class: 'form-control' %>
@@ -54,10 +56,31 @@
 
             <%= attorney_builder.label :fax %>
             <%= attorney_builder.text_field :fax, class: 'form-control' %>
-        <% end %>
 
-        <br>
+        <% end %>
+            <hr>
+            <%= f.fields_for :attorneys do |attorney_builder_1| %>
+            <%= attorney_builder_1.label :name %>
+            <%= attorney_builder_1.text_field :name, class: 'form-control' %>
+
+            <%= attorney_builder_1.label :firm %>
+            <%= attorney_builder_1.text_field :firm, class: 'form-control' %>
+
+            <%= attorney_builder_1.label :address %>
+            <%= attorney_builder_1.text_field :address, class: 'form-control' %>
+
+            <%= attorney_builder_1.label :phone %>
+            <%= attorney_builder_1.text_field :phone, class: 'form-control' %>
+
+            <%= attorney_builder_1.label :fax %>
+            <%= attorney_builder_1.text_field :fax, class: 'form-control' %>
+
+        <% end %>
+        </div>
+
+        <div class="col-md-4 patient_intake adjuster_creation">
         <%= f.fields_for :adjusters do |aj| %>
+        <h2>Patient Adjuster</h2>
           <%= aj.label :name %>
           <%= aj.text_field :name, class: 'form-control' %>
 

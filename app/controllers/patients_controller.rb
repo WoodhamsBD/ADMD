@@ -31,6 +31,7 @@ class PatientsController < ApplicationController
 
 	def edit
 		@patient = Patient.find(params[:id])
+		@attorneys = @patient.attorneys.paginate(page: params[:page])
 	end
 
 	def update

@@ -7,6 +7,10 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
+.container {
+  width: auto;
+}
+
 body {
   padding-top: 60px;
 }
@@ -145,8 +149,7 @@ aside {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
-  margin-bottom: 3px;
+  margin-bottom: 1px;
   @include box_sizing(border-box);
 }
 
@@ -154,8 +157,16 @@ input {
   height: auto !important;
 }
 
+.form-control {
+  padding: 0 0 0 0;
+}
+
+.label-control {
+  padding: 0 0 0 0;
+}
+
 .checkbox {
-  margin-top: -10px;
+  margin-top: 10px;
   margin-bottom: 10px;
   span {
     margin-left: 20px;

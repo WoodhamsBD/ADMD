@@ -1,0 +1,18 @@
+<%= f.fields_for :attorneys do |attorney_builder| %>
+<%= attorney_builder.label :name %>
+<%= attorney_builder.text_field :name, class: 'form-control' %>
+
+<%= attorney_builder.label :firm %>
+<%= attorney_builder.text_field :firm, class: 'form-control' %>
+
+<%= attorney_builder.label :address %>
+<%= attorney_builder.text_field :address, class: 'form-control' %>
+
+<%= attorney_builder.label :phone %>
+<%= attorney_builder.text_field :phone, class: 'form-control' %>
+
+<%= attorney_builder.label :fax %>
+<%= attorney_builder.text_field :fax, class: 'form-control' %>
+
+<% end %>
+<hr>

@@ -2,7 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#patient_intake{
+.patient_intake{
+	margin-bottom: 50px;
+	line-height: 90%;
+}
 
-	margin-bottom: 50px;	
+
+.patient_attorney_info{
+	list-style-type: none;
+
+	h4 {
+		line-height: 90%;
+	}
+	p {
+		line-height: 80%;
+	}
+
 }

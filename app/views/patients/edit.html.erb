@@ -2,7 +2,7 @@
 <h1>Update Patient Information:</h1>
 
 <div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-4">
 		<%= form_for(@patient) do |f| %>
       <%= render 'shared/patient_messages' %>
 
@@ -37,6 +37,25 @@
       <%= f.text_field :notes, class: 'form-control' %>
 
       <%= f.submit "Save these updates", class: "btn btn-primary" %>
+    </div>
+
+    <div class="col-md-4">
+      <section class="patient_attorney_info">
+        <% if @patient.attorneys.any? %>
+        <h5>Patient Attorneys:</h5>
+          <% @attorneys.each do |att| %>
+            <%= render partial:"attorneys/edit_attorney", locals: {f: f} %>
+          <% end %>
+        <% end %>
+      </section>
+    </div>
+
+    <div class="col-md-4">
+     <section class="patient_appointment_info">
+      <h4>Upcoming Appointments:</h4>
+        <p>Pull list of Appointments here</p>
+
+    </section>
+    </div>
     <% end %>
-  </div>
 </div>
