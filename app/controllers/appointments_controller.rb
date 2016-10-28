@@ -1,9 +1,13 @@
 class AppointmentsController < ApplicationController
+	before_action :
 
 	def index
-		@appointment = Appointment.paginate(page: params[:page])
+		if params[:search]
+			@appointments = Appointment.search(params[:search]).paginate(page: params[:page])
+		else
+			@appointments = Appointment.paginate(page: params[:page])
+		end
 	end
-
 	def show
 		@appointment = Appointment.find(params[:id])
 	end

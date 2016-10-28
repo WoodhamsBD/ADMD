@@ -13,3 +13,10 @@ module ApplicationHelper
 	  link_to_function(name, "add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")")
 	end
 end
+
+# def sortable(column, name = nil)
+#   name ||= column.titleize
+#   css_class = column == sort_column ? "current #{sort_direction}" : nil
+#   direction = column == sort_column && sort_direction == "asc" ? "desc" : "asc"
+  
+# end

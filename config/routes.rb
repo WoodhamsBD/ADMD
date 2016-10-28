@@ -17,7 +17,9 @@ Rails.application.routes.draw do
   # Need Routes for all models 
 
   #Patient
-  resources :patients
+  resources :patients do
+    resources :appointments, only: [:index, :show, :new]
+  end
 
   #Appointment
   resources :appointments

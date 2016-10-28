@@ -1,8 +1,11 @@
+<% if logged_in? %>
 <% provide(:title, 'All Patients') %>
 <h1>All Patients</h1>
 
 <div class="col-md-2">
 	<%= form_tag(patients_path, method: :get, id: 'search-form') do %>
+		<%= hidden_field_tag :direction, params[:direction] %>
+		<%= hidden_field_tag :sort, params[:sort] %>
 		<p>
 	  <%= text_field_tag :search, params[:search], placeholder:"Search By Name" %>
 	  <%= submit_tag 'Search', name: nil %>
@@ -13,17 +16,18 @@
 
 <%= will_paginate %>
 
-<ul class="patients">
 	<table class="patientTable">
 		<tr>
-		<th> ID </th>
-		<th> Name </th>
-		<th> DOB </th>
-		<th> Updated At</th>
-		<th> Created At</th>
+		<th class="text-center">ID</th>
+		<th class="text-center">Name</th>
+		<th class="text-center">DOB</th>
+		<th class="text-center">Updated At</th>
+		<th class="text-center">Created At</th>
 	</tr>
 		<%= render @patients %>
 	</table>
-</ul>
+
 
 <%= will_paginate %>
+<% end %>
+

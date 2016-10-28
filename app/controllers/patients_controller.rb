@@ -1,4 +1,5 @@
 class PatientsController < ApplicationController
+	helper_method :sort_column, :sort_direction
 
 	def index
 		if params[:search]
@@ -58,5 +59,12 @@ class PatientsController < ApplicationController
 		params.require(:patient).permit(:name, :address, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes, attorneys_attributes: [:name, :firm, :address, :phone, :fax], adjusters_attributes: [:name, :agency, :address, :phone, :fax])
 	end
 
+	def sort_column
+		Patient.columns.include?(params[:sort]) ? params[:sort] : "name"
+	end
+
+	def sort_direction
+		%w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+	end
 
 end
