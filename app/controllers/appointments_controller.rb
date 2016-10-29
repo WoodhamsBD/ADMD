@@ -1,5 +1,8 @@
 class AppointmentsController < ApplicationController
-	before_action :
+	
+	def new
+		@appointment = Appointment.build
+	end
 
 	def index
 		if params[:search]
@@ -42,5 +45,9 @@ class AppointmentsController < ApplicationController
 
 	  def appointment_params
 	  	params.require(:title, :office, :address, :type, :status)
+	  end
+
+	  def set_patient
+	  	@patient = Patient.find_by(id: params[:patient_id])
 	  end
 end
