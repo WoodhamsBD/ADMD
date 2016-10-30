@@ -1,10 +1,19 @@
 class Patient < ApplicationRecord
-	has_many :appointments
+	
+	# Relations
+	has_many :appointments, inverse_of: :patient, dependent: :destroy 
 	has_many :attorneys, inverse_of: :patient, dependent: :destroy
-	has_many :adjusters 
+	has_many :adjusters
+
+	#Validations
 	validates :ssn, uniqueness: true
+	validates	:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, presence: true
+
+	#Nested Edits
 	accepts_nested_attributes_for :attorneys, allow_destroy: true
 
+
+	# Search Function
 	def self.search(search)
 	  if search
 	    where('name LIKE ?', "%#{search}%")

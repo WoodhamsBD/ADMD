@@ -32,9 +32,10 @@ ActiveRecord::Schema.define(version: 20161014191847) do
     t.string   "address"
     t.string   "type"
     t.string   "status"
+    t.datetime "appointment_time"
     t.integer  "patient_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.index ["patient_id"], name: "index_appointments_on_patient_id", using: :btree
   end
 
@@ -51,7 +52,10 @@ ActiveRecord::Schema.define(version: 20161014191847) do
 
   create_table "patients", force: :cascade do |t|
     t.string   "name"
-    t.string   "address"
+    t.string   "street_address"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip_code"
     t.string   "phone"
     t.string   "ssn"
     t.string   "dob"
@@ -60,8 +64,8 @@ ActiveRecord::Schema.define(version: 20161014191847) do
     t.string   "panel_number"
     t.string   "wcab_number"
     t.string   "notes"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "users", force: :cascade do |t|

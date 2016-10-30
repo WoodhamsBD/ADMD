@@ -13,21 +13,18 @@
 	<% end %>
 </div>
 
+<div class="col-md-10">
 
-<%= will_paginate %>
-
-	<table class="patientTable">
-		<tr>
-		<th class="text-center">ID</th>
-		<th class="text-center">Name</th>
-		<th class="text-center">DOB</th>
-		<th class="text-center">Updated At</th>
-		<th class="text-center">Created At</th>
-	</tr>
-		<%= render @patients %>
-	</table>
-
-
-<%= will_paginate %>
-<% end %>
-
+		<table class="patientTable">
+			<tr>
+			<th class="text-center">ID</th>
+			<th class="text-center">Name</th>
+			<th class="text-center">DOB</th>
+			<th class="text-center">Updated At</th>
+			<th class="text-center">Created At</th>
+		</tr>
+			<%= render @patients %>
+		</table>
+	<%= will_paginate @patients %>
+	<% end %>
+</div>

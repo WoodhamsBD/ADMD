@@ -6,35 +6,44 @@
 		<%= form_for(@patient) do |f| %>
       <%= render 'shared/patient_messages' %>
 
-      <%= f.label :name %>
+      <%= f.label :name, class: 'label-control'%>
       <%= f.text_field :name, class: 'form-control' %>
 
-      <%= f.label :address %>
-      <%= f.text_field :address, class: 'form-control' %>
+      <%= f.label :street_address, class: 'label-control'%>
+      <%= f.text_field :street_address, class: 'form-control' %>
 
-      <%= f.label :phone %>
+      <%= f.label :city, class: 'label-control'%>
+      <%= f.text_field :city, class: 'form-control' %>
+
+      <%= f.label :state, class: 'label-control'%>
+      <%= f.text_field :state, class: 'form-control' %>
+
+      <%= f.label :zip_code, class: 'label-control'%>
+      <%= f.text_field :zip_code, class: 'form-control' %>
+
+      <%= f.label :phone, class: 'label-control'%>
       <%= f.text_field :phone, class: 'form-control' %>
 
-      <%= f.label :ssn %>
+      <%= f.label :ssn, class: 'label-control'%>
       <%= f.text_field :ssn, class: 'form-control' %>
 
-      <%= f.label :dob %>
-      <%= f.text_field :dob, class: 'form-control capitalize' %>
+      <%= f.label :dob, class: 'label-control'%>
+      <%= f.text_field :dob, class: 'form-control' %>
 
-      <%= f.label :employer %>
+      <%= f.label :employer, class: 'label-control'%>
       <%= f.text_field :employer, class: 'form-control' %>
 
-      <%= f.label :claim_number %>
+      <%= f.label :claim_number, class: 'label-control'%>
       <%= f.text_field :claim_number, class: 'form-control' %>
 
-      <%= f.label :panel_number %>
+      <%= f.label :panel_number, class: 'label-control'%>
       <%= f.text_field :panel_number, class: 'form-control' %>
 
-      <%= f.label :wcab_number %>
+      <%= f.label :wcab_number, class: 'label-control'%>
       <%= f.text_field :wcab_number, class: 'form-control' %>
 
       <%= f.label :notes %>
-      <%= f.text_field :notes, class: 'form-control' %>
+      <%= f.text_area :notes, :rows => 5, class: 'form-control' %>
 
       <%= f.submit "Save these updates", class: "btn btn-primary" %>
     </div>
@@ -42,10 +51,10 @@
     <div class="col-md-4">
       <section class="patient_attorney_info">
         <% if @patient.attorneys.any? %>
-        <h5>Patient Attorneys:</h5>
-          <% @attorneys.each do |att| %>
+        <h4>Patient Attorneys:</h4>
+
             <%= render partial:"attorneys/edit_attorney", locals: {f: f} %>
-          <% end %>
+
         <% end %>
       </section>
     </div>
