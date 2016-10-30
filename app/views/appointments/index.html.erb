@@ -1,22 +1,21 @@
 <% if logged_in? %>
 <% provide(:title, 'Appointments') %>
 
-<h1>All Appointments</h1>
+<h3>Monthly Appointments</h3>
 
-<%= will_paginate %>
-<div class="appointments">
 
+<div class="col-md-2">
+	<h2>Create Appointment</h2>
 </div>
 
-<table class="appointmentTable">
-	<tr>
-		<th class="text-center">Patient</th>
-		<th class="text-center">Title</th>
-		<th class="text-center">Office</th>
-		<th class="text-center"></th>
-		<th class="text-center"></th>
-		<th class="text-center"></th>
-		<th class="text-center"></th>
-</table>
+<div class="col-md-10">
+<div class="calendar">
+	<%= month_calendar events: @appointments do |date| %>
+			<div class="calendar_appointment">
 
+		</div>
+	  <%= date.day %>
+	<% end %>
+</div>
+</div>
 <% end %>
