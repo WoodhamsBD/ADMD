@@ -1,3 +1,3 @@
 # README
 
-This is ADMD. An online software suite for AME/QME offices.
+This is ADMD. Online software for AME/QME offices.
