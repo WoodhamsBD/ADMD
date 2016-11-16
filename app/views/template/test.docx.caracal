@@ -1,0 +1,15 @@
+#-----------------------------------------------------
+# page settings
+#-----------------------------------------------------
+
+docx.page_numbers true do
+	align :center
+end
+
+docx.font name: 'Courier New'
+
+docx.style id: 'AltFont', name: 'altFont', font: 'Palatino'
+
+
+#-----------------------------------------------------
+# Maintain Common Style across all 

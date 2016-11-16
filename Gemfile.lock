@@ -50,6 +50,13 @@ GEM
       will_paginate
     builder (3.2.2)
     byebug (9.0.0)
+    caracal (1.0.8)
+      nokogiri (~> 1.6)
+      rubyzip (~> 1.1)
+      tilt (>= 1.4)
+    caracal-rails (1.0.1)
+      caracal (~> 1.0)
+      rails (>= 3.2)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -161,6 +168,7 @@ GEM
     rb-inotify (0.9.7)
       ffi (>= 0.5.0)
     ruby-progressbar (1.8.1)
+    rubyzip (1.2.0)
     sass (3.4.22)
     sass-rails (5.0.5)
       railties (>= 4.0.0, < 6)
@@ -201,7 +209,9 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
+    wicked_pdf (1.1.0)
     will_paginate (3.1.0)
+    wkhtmltopdf-binary (0.12.3.1)
 
 PLATFORMS
   ruby
@@ -211,6 +221,8 @@ DEPENDENCIES
   bootstrap-sass (= 3.3.6)
   bootstrap-will_paginate (= 0.0.10)
   byebug (= 9.0.0)
+  caracal (~> 1.0)
+  caracal-rails (~> 1.0)
   coffee-rails (= 4.2.1)
   faker (= 1.6.3)
   faker-medical (~> 0.5.2)
@@ -232,7 +244,9 @@ DEPENDENCIES
   turbolinks (= 5.0.0)
   uglifier (= 3.0.0)
   web-console (= 3.1.1)
+  wicked_pdf (= 1.1.0)
   will_paginate (= 3.1.0)
+  wkhtmltopdf-binary (= 0.12.3.1)
 
 RUBY VERSION
    ruby 2.3.1p112

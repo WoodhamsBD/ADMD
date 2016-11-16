@@ -30,7 +30,6 @@ class PatientsController < ApplicationController
 			end
 	end
 
-
 	def edit
 		@patient = Patient.find(params[:id])
 		@attorneys = @patient.attorneys
@@ -51,6 +50,9 @@ class PatientsController < ApplicationController
 		flash[:success] = "Patient Deleted"
 		redirect_to patients_url
 	end
+
+
+	# Create each Download template 
 
 
 	private

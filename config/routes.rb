@@ -30,4 +30,8 @@ Rails.application.routes.draw do
   #Adjuster
   #resources :adjuster
 
+
+  #Templates
+  
+
 end
