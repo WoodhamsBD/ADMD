@@ -1,26 +1,46 @@
-<%= render partial: shared/errors”, locals: { object: appointment } %>
-<%= form_for appointment do |f| %>
-  <%= patient_fields(f, appointment, patient) %>
-  <div class=”field”>
-    <p>
-      <%= label_tag “appointment[appointment_time][date]”, “Date” %>
-      <%= text_field_tag “appointment[appointment_time][date]”,   appointment_date(appointment), class: “datepicker” %>
-    </p>
-  </div>
-  <div class=”field”>
-    <p id=”time”>
-      <%= label_tag “appointment[appointment_time][hour]”, “Time” %>
-      <%= hour_selector(“appointment[appointment_time][hour]”, appointment) %> : 
-      <%= min_selector(“appointment[appointment_time][min]”, appointment) %> 
-    </p>
-  </div>
-  <div class=”field”>
-    <p>
-      <%= f.label :duration %> 
-      <%= duration_hour_field(“appointment[duration][hour]”, appointment) %>
-      <%= duration_minute_field(“appointment[duration][min]”, appointment) %>
-    </p>
-  </div> 
-  <p><%= f.submit %></p>
+<%= form_for(@appointment) do |f| %>
+  <% if @appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
 
+      <ul>
+      <% @appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br>
+    <%= f.datetime_select :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :office %><br>
+    <%= f.text_field :office %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
 <% end %>

@@ -53,10 +53,6 @@ class PatientsController < ApplicationController
 		redirect_to patients_url
 	end
 
-
-	# 
-
-
 	private
 
 	def patient_params
