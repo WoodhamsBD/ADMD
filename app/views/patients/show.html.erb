@@ -9,6 +9,24 @@
 	</div>
 </div>
 
+
+<div class="row">
+  <div class="col-md-6">
+    <div class="templates_box center">
+      <h4>Templates</h4>
+      <p>Buttons Here</p>
+    </div>
+  </div>
+  <div class="col-md-6">
+    <section class="patient_appointment_info center">
+      <h4>Upcoming Appointments:</h4>
+      <p>list of Appointments here</p>
+    </section>
+  </div>
+</div>
+
+<hr>
+
 <div class="row">
   <aside class="col-md-4">
     <section class="patient_info">
@@ -35,14 +53,6 @@
   </aside>
 
   <div class="col-md-4">
-
-    <section class="patient_appointment_info">
-      <h4>Upcoming Appointments:</h4>
-        <p>Pull list of Appointments here</p>
-
-    </section>
-
-
     <section class="patient_attorney_info">
       <% if @patient.attorneys.any? %>
       <h5>Patient Attorneys:</h5>
@@ -52,14 +62,14 @@
   </div>
 
   <div class="col-md-4">
-
     <section class="patient_adjuster_info">
-      <%if @patient.adjusters.any? %>
-      <h5>Patient Adjuster</h5>
-        <%= render @adjuster %>
+      <% if @patient.adjusters.any? %>
+      <h5>Patient Adjusters:</h5>
+        <%= render @adjusters %>
         <% end %>
     </section>
-    <h4>Templates</h4>
   </div>
+
+
 
 </div>

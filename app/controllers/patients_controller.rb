@@ -12,6 +12,7 @@ class PatientsController < ApplicationController
 	def show
 		@patient = Patient.find(params[:id])
 		@attorneys = @patient.attorneys.paginate(page: params[:page])
+		@adjusters = @patient.adjusters.paginate(page: params[:page])
 	end
 
 	def new
@@ -33,6 +34,7 @@ class PatientsController < ApplicationController
 	def edit
 		@patient = Patient.find(params[:id])
 		@attorneys = @patient.attorneys
+		@adjusters = @patient.adjusters
 	end
 
 	def update
@@ -52,13 +54,15 @@ class PatientsController < ApplicationController
 	end
 
 
-	# Create each Download template 
+	# 
 
 
 	private
 
 	def patient_params
-		params.require(:patient).permit(:name, :address, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes, attorneys_attributes: [:id, :name, :firm, :address, :phone, :fax], adjusters_attributes: [:id, :name, :agency, :address, :phone, :fax])
+		params.require(:patient).permit(:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes, 
+			attorneys_attributes: [:id, :name, :firm, :address, :phone, :fax],
+			adjusters_attributes: [:id, :name, :agency, :address, :phone, :fax])
 	end
 
 	def sort_column

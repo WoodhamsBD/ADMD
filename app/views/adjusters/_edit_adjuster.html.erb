@@ -1,0 +1,18 @@
+<%= f.fields_for :adjusters do |adjuster_builder| %>
+<%= adjuster_builder.label :name %>
+<%= adjuster_builder.text_field :name, class: 'form-control' %>
+
+<%= adjuster_builder.label :agency %>
+<%= adjuster_builder.text_field :agency, class: 'form-control' %>
+
+<%= adjuster_builder.label :address %>
+<%= adjuster_builder.text_field :address, class: 'form-control' %>
+
+<%= adjuster_builder.label :phone %>
+<%= adjuster_builder.text_field :phone, class: 'form-control' %>
+
+<%= adjuster_builder.label :fax %>
+<%= adjuster_builder.text_field :fax, class: 'form-control' %>
+
+<% end %>
+<hr>

@@ -88,8 +88,8 @@
         </div>
 
         <div class="col-md-4 patient_intake adjuster_creation">
-        <%= f.fields_for :adjusters do |aj| %>
         <h2>Patient Adjuster</h2>
+        <%= f.fields_for :adjusters do |aj| %>
           <%= aj.label :name %>
           <%= aj.text_field :name, class: 'form-control' %>
 

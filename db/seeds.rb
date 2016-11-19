@@ -25,4 +25,5 @@ end
 2. times do |a|
 	Patient.find(1).attorneys.create(name: Faker::Name.name, firm: "Atorney Seed Firm", address: "123 Willoby Lane Albany CA 94706", phone: "555-555-5555", fax: "555-555-5555")
 end
+Patient.find(1).adjusters.create(name: Faker::Name.name, agency: "Adjuster Agency", address: "234 Back Mill Rd. Berkeley CA 84565", phone: "555-555-5555", fax: "555-555-5555")
 

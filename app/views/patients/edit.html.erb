@@ -60,11 +60,15 @@
     </div>
 
     <div class="col-md-4">
-     <section class="patient_appointment_info">
-      <h4>Upcoming Appointments:</h4>
-        <p>Pull list of Appointments here</p>
+      <section class="patient_adjuster_info">
+        <% if @patient.adjusters.any? %>
+        <h4>Patient Adjusters:</h4>
 
-    </section>
+            <%= render partial:"adjusters/edit_adjuster", locals: {f: f} %>
+
+        <% end %>
+      </section>
     </div>
+
     <% end %>
 </div>

@@ -1,5 +1,6 @@
-class AdjusterController < ApplicationController
-		def index
+class AdjustersController < ApplicationController
+	
+	def index
 		@adjusters = Adjusters.paginate(page: params[:page])
 	end
 
@@ -12,7 +13,7 @@ class AdjusterController < ApplicationController
 	end
 
 	def create
-		@adjuster = Adjuster.new(adjuster_params)
+		@adjuster = @patient.adjusters.build(adjuster_params)
 		if @adjuster.save
 			flash[:info] = "Adjuster has been added to the system"
 			redirect_to @adjuster
