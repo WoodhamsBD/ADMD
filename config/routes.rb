@@ -18,7 +18,7 @@ Rails.application.routes.draw do
 
   #Patient
   resources :patients do
-    resources :appointments, only: [:index, :show, :new]
+    resources :appointments, only: [:index, :show, :new, :create]
   end
 
   #Appointment

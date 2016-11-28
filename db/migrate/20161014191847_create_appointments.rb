@@ -5,7 +5,7 @@ class CreateAppointments < ActiveRecord::Migration[5.0]
       t.string :title
     	t.string :office
     	t.string :address
-    	t.string :type
+    	t.string :appointment_type
     	t.string :status
       t.datetime :start_time
 

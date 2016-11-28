@@ -13,6 +13,7 @@ class PatientsController < ApplicationController
 		@patient = Patient.find(params[:id])
 		@attorneys = @patient.attorneys.paginate(page: params[:page])
 		@adjusters = @patient.adjusters.paginate(page: params[:page])
+		@appointments = @patient.appointments.paginate(page: params[:page])
 	end
 
 	def new

@@ -1,0 +1,8 @@
+<li id="patient_appointments-<%= appointment.id %>">
+	<p><strong>Title</strong>: <%= appointment.title %></p>
+	<p><strong>Office</strong>: <%= appointment.office %></p>
+	<p><strong>Type</strong>: <%= appointment.appointment_type %> <strong>Status</strong>: <%= appointment.status %></p>
+	<p>Start Time: <%= appointment.start_time %></p>
+	<%= link_to 'Edit', edit_appointment_path(@patient.appointments) %>
+	<hr>
+</li>

@@ -14,6 +14,7 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/new
   def new
+    @patient = Patient.find(params[:patient_id])
     @appointment = Appointment.new
   end
 
@@ -24,7 +25,8 @@ class AppointmentsController < ApplicationController
   # POST /appointments
   # POST /appointments.json
   def create
-    @appointment = Appointment.new(appointment_params)
+    @patient = Patient.find(params[:patient_id])
+    @appointment = @patient.appointments.build(appointment_params)
 
     respond_to do |format|
       if @appointment.save
@@ -69,6 +71,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters
     def appointment_params
-      params.require(:appointment).permit(:name, :start_time)
+      params.require(:appointment).permit(:title, :office, :address, :appointment_type, :status, :start_time, :patient_id)
     end
 end

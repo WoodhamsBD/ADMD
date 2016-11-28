@@ -20,7 +20,10 @@
   <div class="col-md-6">
     <section class="patient_appointment_info center">
       <h4>Upcoming Appointments:</h4>
-      <p>list of Appointments here</p>
+      <% if @patient.appointments.any? %>
+        <%= render @appointments %>
+      <% end %>
+      <%= link_to "New Appointment", new_patient_appointment_path(:patient_id => @patient.id), class: "btn btn-primary" %>
     </section>
   </div>
 </div>
