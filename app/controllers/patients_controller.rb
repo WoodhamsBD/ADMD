@@ -54,7 +54,7 @@ class PatientsController < ApplicationController
 		redirect_to patients_url
 	end
 
-	# Template Specific Actions for REST routes
+	# Template Specific Actions for routing
 
 	def appointment_confirmation
 		@patient = Patient.find(params[:patient_id])
@@ -65,6 +65,29 @@ class PatientsController < ApplicationController
 	end
 
 
+	def depo_invoice
+		@patient = Patient.find(params[:patient_id])
+
+		respond_to do |format|
+      format.docx { headers["Content-Disposition"] = "attachment; filename=\"depo_invoice.docx\"" }
+    end
+	end
+
+	def depo_confirmation
+		@patient = Patient.find(params[:patient_id])
+
+		respond_to do |format|
+      format.docx { headers["Content-Disposition"] = "attachment; filename=\"depo_confirmation.docx\"" }
+    end
+	end
+
+	def action_items
+		@patient = Patient.find(params[:patient_id])
+
+		respond_to do |format|
+      format.docx { headers["Content-Disposition"] = "attachment; filename=\"action_items.docx\"" }
+    end
+	end
 
 	private
 

@@ -14,8 +14,13 @@
   <div class="col-md-6">
     <div class="templates_box center">
       <h4>Templates</h4>
-      <p>Buttons Here</p>
-      <p><%= link_to "Appointment Confirmation", patient_appointment_confirmation_path(:patient_id => @patient.id), class: "btn btn-primary" %></p>
+      <p>Clicking any button will begin a download of the relevant template for this patient.</p>
+      <p>
+      <%= link_to "Appointment Confirmation", patient_appointment_confirmation_path(:patient_id => @patient.id), class: "btn btn-primary" %>
+      <%= link_to "Depo Invoice", patient_depo_invoice_path(:patient_id => @patient.id), class: "btn btn-primary" %>
+      <%= link_to "Depo Confirmation", patient_depo_confirmation_path(:patient_id => @patient.id), class: "btn btn-primary" %>
+      <%= link_to "Action Items", patient_action_items_path(:patient_id => @patient.id), class: "btn btn-primary" %>
+      </p>
     </div>
   </div>
   <div class="col-md-6">

@@ -10,13 +10,45 @@ docx.font name: 'Courier New'
 
 docx.style id: 'AltFont', name: 'altFont', font: 'Palatino'
 
+#-----------------------------------------------------
+docx.p Date.today, align: :right
+docx.h1 'Adam Duhan, M.D.', align: :center
+docx.p 'Occupational/Internal Medicine', align: :center
+docx.p '1498 Solano Ave.', align: :center
+docx.p 'Albany, CA 94706', align: :center
+docx.p 'Phone:(510)990-6699  Fax:(888)990-2032', align: :center
+docx.hr
+docx.p
 
-docx.p 'Hi'
+
+
 docx.p @patient.name
+docx.p @patient.street_address
+docx.p @patient.city 
+docx.p @patient.state
+docx.p @patient.zip_code
+
+docx.p
 
 
+docx.p 'Dear ', @patient.name
+
+docx.p
+
+docx.p 'An appointment for a workers’ compensation evaluation has been made for you as shown below. If you cannot keep your appointment, please call this office and the referring party as soon as possible to re-schedule. Please be aware that a fee will be charged for any cancellation or reschedule of your appointment made two weeks or less before the date scheduled. If you have any questions regarding this appointment, please call this office at (510) 524-1197.'
+
+docx.p
+docx.p 'Please bring all materials you need to correctly recall your medical history, including names of any medications. Please note medical evaluation will take from 2 to 2.5 hours.'
+
+docx.p
+docx.p
 
 
-
+docx.p 'Appointment arranged by:'
+docx.p 'Date: '
+docx.p 'Time: '
+docx.p 'Evaluator: Adam Duhan, MD'
+docx.p 'Location: '
+docx.p 'Phone: 510-524-1197'
 
 

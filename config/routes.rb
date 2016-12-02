@@ -20,9 +20,11 @@ Rails.application.routes.draw do
   resources :patients do
     resources :appointments, only: [:index, :show, :new, :create]
     # Templates
-    # Allows for /patient/:id/XXX XXX = Template name
+    # Allows for /patient/:id/TEMPLATE
     get :appointment_confirmation, format: 'docx'
-
+    get :depo_invoice, format: 'docx'
+    get :depo_confirmation, format: 'docx'
+    get :action_items, format: 'docx'
   end
 
   #Appointment
