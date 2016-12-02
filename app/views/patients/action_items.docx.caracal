@@ -36,10 +36,10 @@ docx.p 'In Dr. Adam Duhan’s report dated XXX, he requested the following diagn
 docx.p
 
 docx.p 'Test:'
-docx.p 'loop through all list each title'
+docx.p 
 
 docx.p
-docx.p 'It is Dr. Duhan's professional opinion that these tests would allow for a better assessment of the patient's current disabilities. The California labor code strongly suggests that objective testing be completed in order to most accurately rate the whole person impairment (WPI) created by the injury/illness in question. Please inform our office whether or not you would like these tests completed, and whether we can help in obtaining the results.'
+docx.p 'It is Dr. Duhan\'s professional opinion that these tests would allow for a better assessment of the patient\'s current disabilities. The California labor code strongly suggests that objective testing be completed in order to most accurately rate the whole person impairment (WPI) created by the injury/illness in question. Please inform our office whether or not you would like these tests completed, and whether we can help in obtaining the results.'
 
 docx.p
 
