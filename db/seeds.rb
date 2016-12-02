@@ -27,3 +27,10 @@ end
 end
 Patient.find(1).adjusters.create(name: Faker::Name.name, agency: "Adjuster Agency", address: "234 Back Mill Rd. Berkeley CA 84565", phone: "555-555-5555", fax: "555-555-5555")
 
+User.create!(name:  "Bryan Woodhams",
+             email: "woodhamsbd@gmail.com",
+             password:              "togatoga",
+             password_confirmation: "togatoga",
+             admin:     true,
+             activated: true,
+             activated_at: Time.zone.now)
