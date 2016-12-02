@@ -19,6 +19,10 @@ Rails.application.routes.draw do
   #Patient
   resources :patients do
     resources :appointments, only: [:index, :show, :new, :create]
+    # Templates
+    # Allows for /patient/:id/XXX XXX = Template name
+    get :appointment_confirmation, format: 'docx'
+
   end
 
   #Appointment
@@ -29,9 +33,5 @@ Rails.application.routes.draw do
 
   #Adjuster
   #resources :adjuster
-
-
-  #Templates
-  
 
 end

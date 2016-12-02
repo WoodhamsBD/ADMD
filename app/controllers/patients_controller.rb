@@ -54,6 +54,18 @@ class PatientsController < ApplicationController
 		redirect_to patients_url
 	end
 
+	# Template Specific Actions for REST routes
+
+	def appointment_confirmation
+		@patient = Patient.find(params[:patient_id])
+
+		respond_to do |format|
+      format.docx { headers["Content-Disposition"] = "attachment; filename=\"appointment_confirmation.docx\"" }
+    end
+	end
+
+
+
 	private
 
 	def patient_params
