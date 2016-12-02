@@ -6,7 +6,7 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
 
-25.times do |a|
+10.times do |a|
 	Patient.create!(name: Faker::Name.name,
 								street_address: Faker::Address.street_address,
 								city: Faker::Address.city,
@@ -31,6 +31,15 @@ User.create!(name:  "Bryan Woodhams",
              email: "woodhamsbd@gmail.com",
              password:              "togatoga",
              password_confirmation: "togatoga",
+             admin:     true,
+             activated: true,
+             activated_at: Time.zone.now)
+
+
+User.create!(name:  "Faye Donnelley",
+             email: "faye@re-docs.com",
+             password:              "fayedonnelley",
+             password_confirmation: "fayedonnelley",
              admin:     true,
              activated: true,
              activated_at: Time.zone.now)
