@@ -9,10 +9,12 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    @appointment = Appointment.find(params[:id])
   end
 
   # GET /appointments/new
   def new
+    @patient = Patient.find(params[:patient_id])
     @appointment = Appointment.new
   end
 
@@ -41,9 +43,11 @@ class AppointmentsController < ApplicationController
   # PATCH/PUT /appointments/1
   # PATCH/PUT /appointments/1.json
   def update
+    @appointment = Appointment.find(params[:id])
+
     respond_to do |format|
       if @appointment.update(appointment_params)
-        format.html { redirect_to @appointment, notice: 'appointment was successfully updated.' }
+        format.html { redirect_to @appointment }
         format.json { render :show, status: :ok, location: @appointment }
         flash[:success] = "Appointment Updated"
       else
@@ -56,7 +60,7 @@ class AppointmentsController < ApplicationController
   # DELETE /appointments/1
   # DELETE /appointments/1.json
   def destroy
-    @appointment.destroy
+    Appointment.find(params[:id]).destroy
     respond_to do |format|
       format.html { redirect_to appointments_url, notice: 'appointment was successfully destroyed.' }
       format.json { head :no_content }
