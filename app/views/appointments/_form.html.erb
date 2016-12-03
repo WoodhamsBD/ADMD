@@ -11,7 +11,7 @@
     </div>
   <% end %>
 
-  <%= hidden_field_tag :patient_id, :value => patient.id %>
+  <%= hidden_field_tag "patient_id", @patient.id %>
 
   <div class="field">
     <%= f.label :title %><br>

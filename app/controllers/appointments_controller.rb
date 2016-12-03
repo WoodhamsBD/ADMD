@@ -1,6 +1,5 @@
 class AppointmentsController < ApplicationController
-  before_action :set_appointment, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /appointments
   # GET /appointments.json
   def index
@@ -14,7 +13,6 @@ class AppointmentsController < ApplicationController
 
   # GET /appointments/new
   def new
-    @patient = Patient.find(params[:patient_id])
     @appointment = Appointment.new
   end
 
@@ -47,6 +45,7 @@ class AppointmentsController < ApplicationController
       if @appointment.update(appointment_params)
         format.html { redirect_to @appointment, notice: 'appointment was successfully updated.' }
         format.json { render :show, status: :ok, location: @appointment }
+        flash[:success] = "Appointment Updated"
       else
         format.html { render :edit }
         format.json { render json: @appointment.errors, status: :unprocessable_entity }
@@ -65,10 +64,6 @@ class AppointmentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_appointment
-      @appointment = Appointment.find(params[:id])
-    end
 
     # Never trust parameters
     def appointment_params
