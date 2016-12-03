@@ -1,9 +1,13 @@
-<%= month_calendar appointments: appointments do |date, appointments| %>
+<%= month_calendar events: @appointments do |date, appointments| %>
   <%= date %>
 
   <% appointments.each do |event| %>
     <div>
-      <%= patient.name %>
-    </div>
+	    <p>
+      <%= event.patient.name %>
+      <%= event.title %>
+      <%= event.start_time %>
+      </p>
+     </div>
   <% end %>
 <% end %>

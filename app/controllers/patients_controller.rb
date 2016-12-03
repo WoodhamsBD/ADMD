@@ -40,6 +40,7 @@ class PatientsController < ApplicationController
 
 	def update
 		@patient = Patient.find(params[:id])
+		@attoryneys = @patient.attorneys
 		if @patient.update_attributes(patient_params)
 			flash[:success] = "Patient Updated"
 			redirect_to @patient
@@ -95,6 +96,10 @@ class PatientsController < ApplicationController
 		params.require(:patient).permit(:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes, 
 			attorneys_attributes: [:id, :name, :firm, :address, :phone, :fax],
 			adjusters_attributes: [:id, :name, :agency, :address, :phone, :fax])
+	end
+
+	def attorney_params
+		params.require(:patient).permit(:name, :firm, :address, :phone, :fax)
 	end
 
 	def sort_column
