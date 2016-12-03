@@ -3,6 +3,6 @@
 		<td><%= patient.id %></td>
 		<td><%= link_to patient.name, patient %></td>
 		<td><%= patient.dob %></td>
-		<td><%= patient.updated_at %></td>
-		<td><%= patient.created_at %></td>
+		<td><%= patient.updated_at.strftime("%D - %I:%M %P") %></td>
+		<td><%= patient.created_at.strftime("%D - %I:%M %P") %></td>
 	</tr>

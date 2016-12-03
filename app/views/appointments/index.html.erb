@@ -9,12 +9,12 @@
   <%= render partial: "calendar", locals: {appointments: @appointments} %>
 </div>
 
-<table>
+<table class="table table-span">
   <thead>
     <tr>
-      <th>Name</th>
+      <th>Patient</th>
       <th>Start time</th>
-      <th colspan="3"></th>
+      <th>Office</th>
     </tr>
   </thead>
 
@@ -34,6 +34,6 @@
 </table>
 
 
-<%= link_to 'New Appointment', new_appointment_url %>
+
 
 <% end %>
