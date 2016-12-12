@@ -33,9 +33,9 @@ docx.p
 docx.p
 
 
-docx.p 'Re'
+docx.p 'Re \<%= @patient.name %> '
 docx.p 'Deposition of Dr. Adam Duhan on'
-docx.p 'One hours prep, one hour depo time (XXX/hr)'
+docx.p 'One hours prep, one hour deposition time (XXX/hr)'
 docx.p 'Total: '
 
 

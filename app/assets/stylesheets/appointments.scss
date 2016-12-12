@@ -70,8 +70,7 @@
   }
 
   .calendar-title {
-    
-    font-size: 24px;
+    font-size: 22px;
     margin: 0px 5px 0px 5px;
   }
 
@@ -93,6 +92,8 @@
 
 
 .patient_calendar_appointment {
+  padding: 5px;
+  /** border-style: solid; **/
 	p {
 		line-height: 5px;
 	}
