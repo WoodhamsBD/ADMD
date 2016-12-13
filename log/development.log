@@ -1081,3 +1081,94 @@ Processing by PatientsController#edit as HTML
 Completed 200 OK in 79ms (Views: 74.4ms | ActiveRecord: 2.1ms)
 
 
+Started GET "/" for ::1 at 2016-12-12 17:36:45 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (18.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (4.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 358ms (Views: 347.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for ::1 at 2016-12-12 17:36:48 -0800
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (324.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 369ms (Views: 367.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2016-12-12 17:36:58 -0800
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kj7zv8kCcOEtLmv9QDILTKMvouhyUUOamoaYI0Zl5moqs8oRGC2tAEsojw7oBIG7bbWmppRrXXDlTlcKr8LFdA==", "session"=>{"email"=>"test@test.org", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (25.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test@test.org"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/patients
+Completed 302 Found in 135ms (ActiveRecord: 48.4ms)
+
+
+Started GET "/patients" for ::1 at 2016-12-12 17:36:58 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (17.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [20 times] (12.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "patients"[0m
+  Rendered patients/index.html.erb within layouts/application (52.9ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 104ms (Views: 72.5ms | ActiveRecord: 23.0ms)
+
+
+Started GET "/dist/purify.min.js.map" for ::1 at 2016-12-12 17:37:11 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/dist/purify.min.js.map"):
+  
+actionpack (5.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.1.1) lib/web_console/middleware.rb:131:in `call_app'
+web-console (3.1.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.1.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.0) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `block in tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.0) lib/active_support/tagged_logging.rb:70:in `tagged'
+railties (5.0.0) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.1.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.0) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.0) lib/rails/engine.rb:522:in `call'
+puma (3.4.0) lib/puma/configuration.rb:224:in `call'
+puma (3.4.0) lib/puma/server.rb:569:in `handle_request'
+puma (3.4.0) lib/puma/server.rb:406:in `process_client'
+puma (3.4.0) lib/puma/server.rb:271:in `block in run'
+puma (3.4.0) lib/puma/thread_pool.rb:114:in `block in spawn_thread'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered collection of /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb [50 times] (24.1ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (139.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (67.0ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (118.8ms)
