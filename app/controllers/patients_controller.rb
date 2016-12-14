@@ -59,6 +59,8 @@ class PatientsController < ApplicationController
 
 	def appointment_confirmation
 		@patient = Patient.find(params[:patient_id])
+		@applicant_attorney = @patient.attorneys.where("attorney_type = 'Applicant'")
+		@defense_attorney = @patient.attorneys.where("attorney_type = 'Defense'")
 
 		respond_to do |format|
       format.docx { headers["Content-Disposition"] = "attachment; filename=\"appointment_confirmation.docx\"" }
@@ -68,7 +70,10 @@ class PatientsController < ApplicationController
 
 	def depo_invoice
 		@patient = Patient.find(params[:patient_id])
-
+		@applicant_attorney = @patient.attorneys.where("attorney_type = 'Applicant'")
+		@defense_attorney = @patient.attorneys.where("attorney_type = 'Defense'")
+		@depo_appointment = @patient.appointments.where("appointment_type = 'Deposition'")
+		
 		respond_to do |format|
       format.docx { headers["Content-Disposition"] = "attachment; filename=\"depo_invoice.docx\"" }
     end
@@ -76,6 +81,9 @@ class PatientsController < ApplicationController
 
 	def depo_confirmation
 		@patient = Patient.find(params[:patient_id])
+		@applicant_attorney = @patient.attorneys.where("attorney_type = 'Applicant'")
+		@defense_attorney = @patient.attorneys.where("attorney_type = 'Defense'")
+		@depo_appointment = @patient.appointments.where("appointment_type = 'Deposition'")
 
 		respond_to do |format|
       format.docx { headers["Content-Disposition"] = "attachment; filename=\"depo_confirmation.docx\"" }
@@ -90,10 +98,11 @@ class PatientsController < ApplicationController
     end
 	end
 
+
 	private
 
 	def patient_params
-		params.require(:patient).permit(:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, :notes, 
+		params.require(:patient).permit(:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :date_of_injury, :report_type, :employer, :claim_number, :panel_number, :wcab_number, :notes, 
 			attorneys_attributes: [:id, :name, :firm, :address, :phone, :fax],
 			adjusters_attributes: [:id, :name, :agency, :address, :phone, :fax])
 	end

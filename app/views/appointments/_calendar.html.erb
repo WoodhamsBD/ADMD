@@ -3,8 +3,8 @@
 
   <% appointments.each do |event| %>
     <div class="patient_calendar_appointment">
-	    <p><%= event.patient.name %></p>
-      <p><%= event.title %></p>
+	    <p><%= link_to event.patient.name, patient_path(event) %></p>
+	    <p><%= event.appointment_type %></p>
       <p><%= event.start_time.strftime("%I:%M %P") %>   <%= link_to "Edit", edit_appointment_path(event) %>   <%= link_to "View", appointment_path(event) %></p>
 
       <hr>

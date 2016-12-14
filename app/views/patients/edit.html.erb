@@ -9,6 +9,9 @@
       <%= f.label :name, class: 'label-control'%>
       <%= f.text_field :name, class: 'form-control' %>
 
+      <%= f.label :report_type, class: 'label-control' %>
+      <%= f.select :report_type, options_for_select([["QME", "QME"],["AME", "AME"],["IME", "IME"],["SUPP", "SUPP"]]) %>
+
       <%= f.label :street_address, class: 'label-control'%>
       <%= f.text_field :street_address, class: 'form-control' %>
 
@@ -29,6 +32,9 @@
 
       <%= f.label :dob, class: 'label-control'%>
       <%= f.text_field :dob, class: 'form-control' %>
+
+      <%= f.label :date_of_injury, class: 'label-control' %>
+      <%= f.text_field :date_of_injury, class: 'form-control' %>
 
       <%= f.label :employer, class: 'label-control'%>
       <%= f.text_field :employer, class: 'form-control' %>

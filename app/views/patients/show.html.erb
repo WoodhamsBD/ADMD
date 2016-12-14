@@ -40,6 +40,7 @@
   <aside class="col-md-4">
     <section class="patient_info">
       <h1><%= @patient.name %></h1>
+      <p>Report: <strong><%= @patient.report_type %></strong></p>
       <hr>
 
         <h4>Report Information:</h4>
@@ -47,6 +48,9 @@
         <p>Panel Number: <%= @patient.panel_number %>
         <p>WCAB Number: <%= @patient.wcab_number %> 
         <hr>
+
+        <h5>Date of Injury:</h5>
+        <p><%=@patient.date_of_injury %></p>
 
         <h5>Address:</h5>
         <p><%= @patient.street_address %></p>

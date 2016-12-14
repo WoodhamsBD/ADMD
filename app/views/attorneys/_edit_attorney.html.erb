@@ -2,6 +2,9 @@
 <%= attorney_builder.label :name %>
 <%= attorney_builder.text_field :name, class: 'form-control' %>
 
+<%= attorney_builder.label :attorney_type %>
+<%= attorney_builder.select :attorney_type, options_for_select([["Applicant", "Applicant"], ["Defense", "Defense"]]) %>
+
 <%= attorney_builder.label :firm %>
 <%= attorney_builder.text_field :firm, class: 'form-control' %>
 

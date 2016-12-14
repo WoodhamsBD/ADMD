@@ -27,7 +27,6 @@ ActiveRecord::Schema.define(version: 20161014191847) do
   end
 
   create_table "appointments", force: :cascade do |t|
-    t.string   "title"
     t.string   "office"
     t.string   "address"
     t.string   "appointment_type"
@@ -42,12 +41,13 @@ ActiveRecord::Schema.define(version: 20161014191847) do
   create_table "attorneys", force: :cascade do |t|
     t.string   "name"
     t.string   "firm"
+    t.string   "attorney_type"
     t.string   "address"
     t.string   "phone"
     t.string   "fax"
     t.integer  "patient_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "patients", force: :cascade do |t|
@@ -59,6 +59,8 @@ ActiveRecord::Schema.define(version: 20161014191847) do
     t.string   "phone"
     t.string   "ssn"
     t.string   "dob"
+    t.string   "date_of_injury"
+    t.string   "report_type"
     t.string   "employer"
     t.string   "claim_number"
     t.string   "panel_number"

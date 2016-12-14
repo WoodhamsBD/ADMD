@@ -27,7 +27,7 @@ docx.p @patient.adjusters.first.phone
 
 docx.p
 
-docx.p 'Dear'
+docx.p 'Dear ' + @patient.name + ','
 
 docx.p
 

@@ -21,20 +21,17 @@ docx.hr
 docx.p Date.today, align: :right
 
 docx.p 'Bill To:'
-docx.p @patient.adjusters.first.name
-docx.p @patient.adjusters.first.agency
-docx.p @patient.adjusters.first.address
+docx.p @applicant_attorney.first.name
+docx.p @applicant_attorney.first.firm
+docx.p @applicant_attorney.first.address
 
 
-docx.p
 docx.p
 docx.h1 'Invoice', align: :center
 docx.p
-docx.p
 
-
-docx.p 'Re \<%= @patient.name %> '
-docx.p 'Deposition of Dr. Adam Duhan on'
+docx.p 'Re: ' + @patient.name
+docx.p 'Deposition of Dr. Adam Duhan on ' + @depo_appointment.first.start_time.strftime('%m/%d/%Y')
 docx.p 'One hours prep, one hour deposition time (XXX/hr)'
 docx.p 'Total: '
 
@@ -53,8 +50,17 @@ docx.p
 docx.p 'Payment must be received before the deposition can proceed. 
 If you have any questions regarding this invoice, please do not hesitate to contact our office.'
 docx.p
-docx.p '	Sincerley,'
+docx.p '	Sincerely,'
 
 docx.p '		Faye Donnelley, office manager'
 docx.p '		(510)529-1197'
 docx.p '		faye@re-docs.com'
+
+docx.p
+docx.p 'CC:'
+docx.p @defense_attorney.first.name
+docx.p @defense_attorney.first.firm
+docx.p @defense_attorney.first.address
+
+
+

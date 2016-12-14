@@ -71,6 +71,6 @@ class AppointmentsController < ApplicationController
 
     # Never trust parameters
     def appointment_params
-      params.require(:appointment).permit(:title, :office, :address, :appointment_type, :status, :start_time, :patient_id)
+      params.require(:appointment).permit(:office, :address, :appointment_type, :status, :start_time, :patient_id)
     end
 end

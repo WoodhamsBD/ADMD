@@ -45,7 +45,7 @@ class AttorneysController < ApplicationController
 	private
 
 	def attorney_params
-		params.require(:attorney).permit(:name, :firm, :address, :phone, :fax)
+		params.require(:attorney).permit(:name, :attorney_type, :firm, :address, :phone, :fax)
 	end
 
 end

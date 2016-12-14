@@ -16,7 +16,7 @@ docx.h1 'Adam Duhan, M.D.', align: :center
 docx.p 'Occupational/Internal Medicine', align: :center
 docx.p '1498 Solano Ave.', align: :center
 docx.p 'Albany, CA 94706', align: :center
-docx.p 'Phone:(510)990-6699  Fax:(888)990-2032', align: :center
+docx.p 'Phone: (510)990-6699  Fax: (888)990-2032', align: :center
 
 docx.hr
 
@@ -26,14 +26,13 @@ docx.p @patient.attorneys.first.address
 docx.p @patient.attorneys.first.phone
 
 docx.p
-docx.p
 docx.p 'This letter serves as confirmation that a deposition with Dr. Adam Duhan has been scheduled as follows. '
 docx.p 
 
-docx.p 'Re:'
-docx.p 'Arranged by:'
-docx.p 'Date:'
-docx.p 'Time:'
+docx.p 'Re: ' + @patient.name
+docx.p 'Arranged by: '
+docx.p 'Date: ' + @depo_appointment.first.start_time.strftime('%m/%d/%Y')
+docx.p 'Time: ' + @depo_appointment.first.start_time.strftime('%H:%M')
 docx.p 'Location: 1498 Solano Ave, Albany, CA 94706'
 docx.p 'Phone: 510-524-1197'
 
@@ -42,8 +41,18 @@ docx.p
 docx.p 'An invoice for the retainer has been sent to XXX. Please note that payment must be received before the deposition can continue.'
 docx.p
 docx.p 'CC:'
-
-docx.p 'Insurance Adjuster:'
+docx.p 'Insurance Adjuster:' 
 docx.p @patient.adjusters.first.name
 docx.p @patient.adjusters.first.agency
 docx.p @patient.adjusters.first.address
+docx.p
+docx.p 'Applicant Attorney:'
+docx.p @applicant_attorney.first.name
+docx.p @applicant_attorney.first.firm
+docx.p @applicant_attorney.first.address
+docx.p
+docx.p 'Defense Attorney:'
+docx.p @defense_attorney.first.name
+docx.p @defense_attorney.first.firm
+docx.p @defense_attorney.first.address
+
