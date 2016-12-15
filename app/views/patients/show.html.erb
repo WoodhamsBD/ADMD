@@ -3,8 +3,8 @@
 <div class="row">
 	<div class="options_row center">
     <p>Use these buttons to edit or remove the patient</p>
-    <%= link_to "Edit Patient", edit_patient_path, class: "btn btn-primary" %>
-    <%= link_to "Delete Patient", @patient, method: :delete,:data => {confirm: 'Are you sure you want to delete this patient? There is NO recovery option!'}, class: "btn btn-danger" %>
+    <%= link_to "Edit Patient", edit_patient_path, class: "btn btn-xs btn-primary" %>
+    <%= link_to "Delete Patient", @patient, method: :delete,:data => {confirm: 'Are you sure you want to delete this patient? There is NO recovery option!'}, class: "btn btn-xs btn-danger" %>
 	</div>
   <hr>
 </div>
@@ -16,10 +16,10 @@
       <h4>Templates</h4>
       <p>Clicking any button will begin a download of the relevant template for this patient.</p>
       <p>
-      <%= link_to "Appointment Confirmation", patient_appointment_confirmation_path(:patient_id => @patient.id), class: "btn btn-primary" %>
-      <%= link_to "Depo Invoice", patient_depo_invoice_path(:patient_id => @patient.id), class: "btn btn-primary" %>
-      <%= link_to "Depo Confirmation", patient_depo_confirmation_path(:patient_id => @patient.id), class: "btn btn-primary" %>
-      <%= link_to "Action Items", patient_action_items_path(:patient_id => @patient.id), class: "btn btn-primary" %>
+      <%= link_to "Appointment Confirmation", patient_appointment_confirmation_path(:patient_id => @patient.id), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Depo Invoice", patient_depo_invoice_path(:patient_id => @patient.id), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Depo Confirmation", patient_depo_confirmation_path(:patient_id => @patient.id), class: "btn btn-xs btn-primary" %>
+      <%= link_to "Action Items", patient_action_items_path(:patient_id => @patient.id), class: "btn btn-xs btn-primary" %>
       </p>
     </div>
   </div>
@@ -29,7 +29,7 @@
       <% if @patient.appointments.any? %>
         <%= render @appointments %>
       <% end %>
-      <%= link_to "New Appointment", new_patient_appointment_path(:patient_id => @patient.id), class: "btn btn-primary" %>
+      <%= link_to "New Appointment", new_patient_appointment_path(:patient_id => @patient.id), class: "btn btn-xs btn-primary" %>
     </section>
   </div>
 </div>

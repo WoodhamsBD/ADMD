@@ -3,6 +3,7 @@
 		<td><%= patient.id %></td>
 		<td><%= link_to patient.name, patient %></td>
 		<td><%= patient.date_of_injury %></td>
+		<td><%= patient.report_type %></td>
 		<td><%= patient.updated_at.strftime("%D - %I:%M %P") %></td>
 		<td><%= patient.created_at.strftime("%D - %I:%M %P") %></td>
 	</tr>

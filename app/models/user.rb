@@ -14,7 +14,7 @@ class User < ApplicationRecord
 
 #------
 
-	# User.digest - Attached new methods to User class
+	# User.digest - Attached method to User class
 	class << self
 		def digest(string)
 			cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost

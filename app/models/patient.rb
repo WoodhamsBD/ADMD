@@ -7,7 +7,7 @@ class Patient < ApplicationRecord
 
 	#Validations
 	validates :ssn, uniqueness: true
-	validates	:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :employer, :claim_number, :panel_number, :wcab_number, presence: true
+	validates	:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :date_of_injury, :dob, :employer, :claim_number, :panel_number, :wcab_number, presence: true
 
 	#Nested Edits
 	accepts_nested_attributes_for :attorneys, allow_destroy: true
@@ -22,4 +22,6 @@ class Patient < ApplicationRecord
 	    all
 	  end
 	end
+
+	
 end
