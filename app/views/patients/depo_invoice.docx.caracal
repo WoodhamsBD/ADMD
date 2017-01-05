@@ -32,8 +32,10 @@ docx.p
 
 docx.p 'Re: ' + @patient.name
 docx.p 'Deposition of Dr. Adam Duhan on ' + @depo_appointment.first.start_time.strftime('%m/%d/%Y')
-docx.p 'One hours prep, one hour deposition time (XXX/hr)'
+docx.p 'One hours prep, one hour deposition time ( 250 / hr )'
 docx.p 'Total: '
+
+docx.p '$500.00'
 
 
 docx.p

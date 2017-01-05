@@ -30,7 +30,7 @@ docx.p 'This letter serves as confirmation that a deposition with Dr. Adam Duhan
 docx.p 
 
 docx.p 'Re: ' + @patient.name
-docx.p 'Arranged by: '
+docx.p 'Arranged by: XXXXXX'
 docx.p 'Date: ' + @depo_appointment.first.start_time.strftime('%m/%d/%Y')
 docx.p 'Time: ' + @depo_appointment.first.start_time.strftime('%H:%M')
 docx.p 'Location: 1498 Solano Ave, Albany, CA 94706'
@@ -38,7 +38,7 @@ docx.p 'Phone: 510-524-1197'
 
 docx.p
 
-docx.p 'An invoice for the retainer has been sent to XXX. Please note that payment must be received before the deposition can continue.'
+docx.p 'Please note that payment must be received before the deposition can continue.'
 docx.p
 docx.p 'CC:'
 docx.p 'Insurance Adjuster:' 
