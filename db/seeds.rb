@@ -6,7 +6,7 @@ User.create!(name:  "Example User",
              activated: true,
              activated_at: Time.zone.now)
 
-10.times do |a|
+2.times do |a|
 	Patient.create!(name: Faker::Name.name,
 								street_address: Faker::Address.street_address,
 								city: Faker::Address.city,
@@ -27,7 +27,6 @@ end
 
 Patient.find(1).attorneys.create(name: Faker::Name.name, firm: "Atorney Seed Firm",attorney_type: "Applicant", address: "123 Willoby Lane Albany CA 94706", phone: "555-555-5555", fax: "555-555-5555")
 Patient.find(1).attorneys.create(name: Faker::Name.name, firm: "Atorney Seed Firm",attorney_type: "Defense", address: "123 Willoby Lane Albany CA 94706", phone: "555-555-5555", fax: "555-555-5555")
-
 Patient.find(1).adjusters.create(name: Faker::Name.name, agency: "Adjuster Agency", address: "234 Back Mill Rd. Berkeley CA 84565", phone: "555-555-5555", fax: "555-555-5555")
 
 User.create!(name:  "Bryan Woodhams",

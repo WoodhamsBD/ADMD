@@ -72,7 +72,7 @@ class PatientsController < ApplicationController
 		@patient = Patient.find(params[:patient_id])
 		@applicant_attorney = @patient.attorneys.where("attorney_type = 'Applicant'")
 		@defense_attorney = @patient.attorneys.where("attorney_type = 'Defense'")
-		@depo_appointment = @patient.appointments.where("appointment_type = 'Deposition'")
+		@depo_appointment = if @patient.appointments.where("appointment_type = 'Deposition'")
 		
 		respond_to do |format|
       format.docx { headers["Content-Disposition"] = "attachment; filename=\"depo_invoice.docx\"" }
