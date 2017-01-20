@@ -12,7 +12,7 @@
       <%= f.text_field :name, class: 'form-control' %>
 
       <%= f.label :report_type, class: 'label-control report_dropdown' %>
-      <%= f.select :report_type, options_for_select([["QME", "QME"],["AME", "AME"],["IME", "IME"],["SUPP", "SUPP"]]) %>
+      <%= f.select :report_type, options_for_select([["QME", "QME"],["AME", "AME"],["IME", "IME"],["SUPP", "SUPP"]], [["Other", "Other"]]) %>
 
       <%= f.label :street_address, class: 'label-control'%>
       <%= f.text_field :street_address, class: 'form-control' %>
