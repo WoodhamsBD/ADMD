@@ -102,7 +102,7 @@ class PatientsController < ApplicationController
 	private
 
 	def patient_params
-		params.require(:patient).permit(:name, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :date_of_injury, :report_type, :employer, :claim_number, :panel_number, :wcab_number, :notes, 
+		params.require(:patient).permit(:name, :interpreter, :street_address, :city, :state, :zip_code, :phone, :ssn, :dob, :date_of_injury, :report_type, :employer, :claim_number, :panel_number, :wcab_number, :notes, 
 			attorneys_attributes: [:id, :name, :firm, :address, :phone, :fax],
 			adjusters_attributes: [:id, :name, :agency, :address, :phone, :fax])
 	end

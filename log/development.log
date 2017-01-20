@@ -8807,3 +8807,1271 @@ Unpermitted parameter: interpreter
 Completed 200 OK in 90ms (Views: 63.8ms | ActiveRecord: 1.2ms)
 
 
+Started GET "/patients" for ::1 at 2017-01-20 13:57:49 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [10 times] (6.7ms)
+  Rendered patients/index.html.erb within layouts/application (52.5ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 344ms (Views: 321.3ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/patients/new" for ::1 at 2017-01-20 13:57:52 -0800
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (364.0ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 442ms (Views: 407.3ms | ActiveRecord: 4.5ms)
+
+
+Started POST "/patients" for ::1 at 2017-01-20 13:57:57 -0800
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qUWsmCWdLexvMWhp06PPqFn8y/8MbBu1o78DatXblYerqdt+Qqs5tPVnvyDozS79midKCu/mnCschI/1rlfEIA==", "patient"=>{"name"=>"", "report_type"=>"QME", "interpreter"=>"", "street_address"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "date_of_injury"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "attorney_type"=>"Applicant", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "1"=>{"name"=>"", "attorney_type"=>"Defense", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters_attributes"=>{"0"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: attorney_type
+Unpermitted parameter: attorney_type
+Unpermitted parameter: interpreter
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.9ms)
+  Rendered patients/new.html.erb within layouts/application (15.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 74ms (Views: 61.3ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/patients" for ::1 at 2017-01-20 13:58:03 -0800
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oNLpdOt1NsG64AMWFEDTzapzO+WRRx1TYNFjWGzMssGiPp6SjEMimSC21F8vLjKYaai6EHLNms3f6u/HF0DjZg==", "patient"=>{"name"=>"Test", "report_type"=>"QME", "interpreter"=>"Spanish", "street_address"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "date_of_injury"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "attorney_type"=>"Applicant", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "1"=>{"name"=>"", "attorney_type"=>"Applicant", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "2"=>{"name"=>"", "attorney_type"=>"Defense", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "3"=>{"name"=>"", "attorney_type"=>"Defense", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters_attributes"=>{"0"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: attorney_type
+Unpermitted parameter: attorney_type
+Unpermitted parameter: attorney_type
+Unpermitted parameter: attorney_type
+Unpermitted parameter: interpreter
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "patients" ("name", "street_address", "city", "state", "zip_code", "phone", "ssn", "dob", "date_of_injury", "report_type", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17) RETURNING "id"[0m  [["name", "Test"], ["street_address", ""], ["city", ""], ["state", ""], ["zip_code", ""], ["phone", ""], ["ssn", ""], ["dob", ""], ["date_of_injury", ""], ["report_type", "QME"], ["employer", ""], ["claim_number", ""], ["panel_number", ""], ["wcab_number", ""], ["notes", ""], ["created_at", 2017-01-20 21:58:03 UTC], ["updated_at", 2017-01-20 21:58:03 UTC]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 11], ["created_at", 2017-01-20 21:58:03 UTC], ["updated_at", 2017-01-20 21:58:03 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 11], ["created_at", 2017-01-20 21:58:03 UTC], ["updated_at", 2017-01-20 21:58:03 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 11], ["created_at", 2017-01-20 21:58:03 UTC], ["updated_at", 2017-01-20 21:58:03 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 11], ["created_at", 2017-01-20 21:58:03 UTC], ["updated_at", 2017-01-20 21:58:03 UTC]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "adjusters" ("name", "agency", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["agency", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", "11"], ["created_at", 2017-01-20 21:58:03 UTC], ["updated_at", 2017-01-20 21:58:03 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/11
+Completed 302 Found in 21ms (ActiveRecord: 4.7ms)
+
+
+Started GET "/patients/11" for ::1 at 2017-01-20 13:58:03 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 11], ["LIMIT", 1]]
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 11], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 11], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [4 times] (0.5ms)
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "11"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "11"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 69ms (Views: 59.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/patients/11" for ::1 at 2017-01-20 13:59:09 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 11], ["LIMIT", 1]]
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 11], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 11], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [4 times] (0.5ms)
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "11"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "11"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (10.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 67ms (Views: 60.4ms | ActiveRecord: 1.8ms)
+
+
+Started DELETE "/patients/11" for ::1 at 2017-01-20 13:59:14 -0800
+Processing by PatientsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"J8DyEdPkW9xX4VApw6EUscUfvVdtyligOaSab/8u6oMlLIX3tNJPhM23h2D4z/XkBsQ8oo5A3z6GnxbwhKK7JA==", "id"=>"11"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1[0m  [["patient_id", 11]]
+  [1m[36mAttorney Load (0.1ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 11]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 3]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 5]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "attorneys" WHERE "attorneys"."id" = $1[0m  [["id", 6]]
+  [1m[36mAdjuster Load (0.1ms)[0m  [1m[34mSELECT "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1[0m  [["patient_id", "11"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "adjusters" WHERE "adjusters"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (2.9ms)[0m  [1m[31mDELETE FROM "patients" WHERE "patients"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients
+Completed 302 Found in 50ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 13:59:14 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.9ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [10 times] (5.9ms)
+  Rendered patients/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 60.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/patients/new" for ::1 at 2017-01-20 13:59:17 -0800
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.3ms)
+  Rendered patients/new.html.erb within layouts/application (11.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 57ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/patients" for ::1 at 2017-01-20 13:59:22 -0800
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RGbjHfDTqfjrR57f4/r3PIx3HV3stz3LUtH8UTiJpJRGipT7l+W9oHERSZbYlBZpT6ycqA89ulXt6nDOQwX1Mw==", "patient"=>{"name"=>"Test", "report_type"=>"QME", "interpreter"=>"spanish", "street_address"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "date_of_injury"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "attorney_type"=>"Applicant", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "1"=>{"name"=>"", "attorney_type"=>"Defense", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters_attributes"=>{"0"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: attorney_type
+Unpermitted parameter: attorney_type
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "patients" ("name", "street_address", "city", "state", "zip_code", "phone", "ssn", "dob", "date_of_injury", "report_type", "employer", "claim_number", "panel_number", "wcab_number", "notes", "created_at", "updated_at", "interpreter") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16, $17, $18) RETURNING "id"[0m  [["name", "Test"], ["street_address", ""], ["city", ""], ["state", ""], ["zip_code", ""], ["phone", ""], ["ssn", ""], ["dob", ""], ["date_of_injury", ""], ["report_type", "QME"], ["employer", ""], ["claim_number", ""], ["panel_number", ""], ["wcab_number", ""], ["notes", ""], ["created_at", 2017-01-20 21:59:22 UTC], ["updated_at", 2017-01-20 21:59:22 UTC], ["interpreter", "spanish"]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 12], ["created_at", 2017-01-20 21:59:22 UTC], ["updated_at", 2017-01-20 21:59:22 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "attorneys" ("name", "firm", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["firm", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", 12], ["created_at", 2017-01-20 21:59:22 UTC], ["updated_at", 2017-01-20 21:59:22 UTC]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "adjusters" ("name", "agency", "address", "phone", "fax", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", ""], ["agency", ""], ["address", ""], ["phone", ""], ["fax", ""], ["patient_id", "12"], ["created_at", 2017-01-20 21:59:22 UTC], ["updated_at", 2017-01-20 21:59:22 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/patients/12
+Completed 302 Found in 15ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/patients/12" for ::1 at 2017-01-20 13:59:22 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 12], ["LIMIT", 1]]
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 12], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 12], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.4ms)
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "12"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.5ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "12"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (12.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 77ms (Views: 69.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 13:59:27 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  Rendered simple_calendar/_month_calendar.html.erb (29.7ms)
+  Rendered appointments/_calendar.html.erb (40.7ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (47.2ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 99ms (Views: 96.0ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 13:59:28 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (9.9ms)
+  Rendered patients/index.html.erb within layouts/application (14.6ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 64ms (Views: 61.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:03:24 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (7.6ms)
+  Rendered patients/index.html.erb within layouts/application (14.0ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 70ms (Views: 67.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/new" for ::1 at 2017-01-20 14:03:25 -0800
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  Rendered patients/new.html.erb within layouts/application (16.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 72ms (Views: 68.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/patients/new" for ::1 at 2017-01-20 14:03:27 -0800
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  Rendered patients/new.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/patients" for ::1 at 2017-01-20 14:03:29 -0800
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8j4RL5S0yZDgh+h0pklWruFvUNLgFh6Ik0UuY0SxK3rw0mbJ84LdyHrRPz2dJ7f7IrTRJwOcmRYsfqL8Pz163Q==", "patient"=>{"name"=>"", "report_type"=>"QME", "interpreter"=>"", "street_address"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "date_of_injury"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "attorney_type"=>"Applicant", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "1"=>{"name"=>"", "attorney_type"=>"Defense", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters_attributes"=>{"0"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: attorney_type
+Unpermitted parameter: attorney_type
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (1.2ms)
+  Rendered patients/new.html.erb within layouts/application (17.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 64ms (Views: 56.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:03:36 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (6.2ms)
+  Rendered patients/index.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 53ms (Views: 50.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/patients/12" for ::1 at 2017-01-20 14:06:14 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 12], ["LIMIT", 1]]
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 12], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 12], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.5ms)
+  [1m[36mAdjuster Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "12"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "12"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (33.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (15.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 380ms (Views: 315.9ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/patients/12/edit" for ::1 at 2017-01-20 14:06:17 -0800
+Processing by PatientsController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering patients/edit.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 12], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.1ms)[0m  [1m[34mSELECT "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1[0m  [["patient_id", 12]]
+  Rendered attorneys/_edit_attorney.html.erb (8.4ms)
+  [1m[36mAdjuster Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "12"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1[0m  [["patient_id", "12"]]
+  Rendered adjusters/_edit_adjuster.html.erb (4.4ms)
+  Rendered patients/edit.html.erb within layouts/application (386.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 442ms (Views: 436.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:06:41 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  Rendered simple_calendar/_month_calendar.html.erb (28.7ms)
+  Rendered appointments/_calendar.html.erb (40.5ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (45.9ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 90ms (Views: 86.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for ::1 at 2017-01-20 14:06:42 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of users/_user.html.erb [3 times] (2.0ms)
+  Rendered users/index.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 62ms (Views: 58.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/new" for ::1 at 2017-01-20 14:06:44 -0800
+Processing by PatientsController#new as HTML
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (0.4ms)
+  Rendered patients/new.html.erb within layouts/application (12.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 58ms (Views: 54.0ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/patients" for ::1 at 2017-01-20 14:06:47 -0800
+Processing by PatientsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TivDckM3F9Lh7UtRREmPD7qWQjrZy2Vk5PqelsWFczBMx7SUJAEDinu7nBh/J25aeU3DzzpB4vpbwRIJvgkilw==", "patient"=>{"name"=>"", "report_type"=>"QME", "interpreter"=>"", "street_address"=>"", "city"=>"", "state"=>"", "zip_code"=>"", "phone"=>"", "ssn"=>"", "dob"=>"", "date_of_injury"=>"", "employer"=>"", "claim_number"=>"", "panel_number"=>"", "wcab_number"=>"", "notes"=>"", "attorneys_attributes"=>{"0"=>{"name"=>"", "attorney_type"=>"Applicant", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}, "1"=>{"name"=>"", "attorney_type"=>"Defense", "firm"=>"", "address"=>"", "phone"=>"", "fax"=>""}}, "adjusters_attributes"=>{"0"=>{"name"=>"", "agency"=>"", "address"=>"", "phone"=>"", "fax"=>""}}}, "commit"=>"Save this Patient"}
+Unpermitted parameter: attorney_type
+Unpermitted parameter: attorney_type
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "patients" WHERE "patients"."ssn" = $1 LIMIT $2[0m  [["ssn", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering patients/new.html.erb within layouts/application
+  Rendered shared/_patient_messages.html.erb (1.1ms)
+  Rendered patients/new.html.erb within layouts/application (15.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 59.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:06:52 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (6.9ms)
+  Rendered patients/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 54ms (Views: 51.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:07:40 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  Rendered simple_calendar/_month_calendar.html.erb (29.5ms)
+  Rendered appointments/_calendar.html.erb (32.8ms)
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (37.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 85ms (Views: 82.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients/1" for ::1 at 2017-01-20 14:07:49 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (1.1ms)
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.6ms)
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (12.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 61ms (Views: 55.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:07:51 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (1.0ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 68ms (Views: 63.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:11:15 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (7.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 54.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/1/appointments/new" for ::1 at 2017-01-20 14:11:17 -0800
+Processing by AppointmentsController#new as HTML
+  Parameters: {"patient_id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (5.0ms)
+  Rendered appointments/new.html.erb within layouts/application (8.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/patients/1/appointments" for ::1 at 2017-01-20 14:11:23 -0800
+Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"80+5gMifxyUucgD9N1HO7lkcPPMSCdLRWdhRhoiK3o/xo85mr6nTfbQk17QMPy+7mse9BvGDVU/m490Z8waPKA==", "patient_id"=>"1", "appointment"=>{"start_time(1i)"=>"2017", "start_time(2i)"=>"1", "start_time(3i)"=>"20", "start_time(4i)"=>"14", "start_time(5i)"=>"11", "office"=>"test", "address"=>"test", "appointment_type"=>"test", "status"=>"test"}, "commit"=>"Create Appointment"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "appointments" ("office", "address", "appointment_type", "status", "start_time", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["office", "test"], ["address", "test"], ["appointment_type", "test"], ["status", "test"], ["start_time", 2017-01-20 22:11:00 UTC], ["patient_id", 1], ["created_at", 2017-01-20 22:11:23 UTC], ["updated_at", 2017-01-20 22:11:23 UTC]]
+  [1m[35m (63.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/appointments/2
+Completed 302 Found in 72ms (ActiveRecord: 65.6ms)
+
+
+Started GET "/appointments/2" for ::1 at 2017-01-20 14:11:23 -0800
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 55ms (Views: 52.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:11:24 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (35.3ms)
+  Rendered appointments/_calendar.html.erb (39.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (44.1ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 91ms (Views: 88.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:11:26 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (8.6ms)
+  Rendered patients/index.html.erb within layouts/application (12.8ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/patients/1" for ::1 at 2017-01-20 14:11:27 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [2 times] (1.6ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.7ms)
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.3ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (15.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 70ms (Views: 62.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:11:28 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:11:34 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 56.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:13:21 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 59ms (Views: 56.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:13:37 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:13:49 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 53ms (Views: 50.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:13:52 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (1.1ms)
+Completed 200 OK in 64ms (Views: 62.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:13:55 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 60.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:14:00 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 68ms (Views: 65.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:15:16 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (6.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 65ms (Views: 62.1ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/appointments/1" for ::1 at 2017-01-20 14:15:19 -0800
+Processing by AppointmentsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3DVvQApH4RYLN1kE9gCDkartRA+EWrkmebymmzfzG0be2RimbXH1TpFhjk3NbmLEaTbF+mfQPrjGhyoETH9K4Q==", "appointment"=>{"start_time(1i)"=>"2016", "start_time(2i)"=>"12", "start_time(3i)"=>"13", "start_time(4i)"=>"15", "start_time(5i)"=>"00", "office"=>"ADMD", "address"=>"1498 Solano Ave Berkeley CA", "appointment_type"=>"Deposition", "status"=>"Booked"}, "commit"=>"Update Appointment", "id"=>"1"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/appointments/1
+Completed 302 Found in 7ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/appointments/1" for ::1 at 2017-01-20 14:15:19 -0800
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:15:21 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (38.0ms)
+  Rendered appointments/_calendar.html.erb (41.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (46.6ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 95ms (Views: 93.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:15:22 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (32.8ms)
+  Rendered appointments/_calendar.html.erb (36.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (40.1ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 85ms (Views: 82.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for ::1 at 2017-01-20 14:15:23 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of users/_user.html.erb [3 times] (1.8ms)
+  Rendered users/index.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 57ms (Views: 54.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:15:25 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (9.3ms)
+  Rendered patients/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 56.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/2" for ::1 at 2017-01-20 14:15:26 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "2"], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 51.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/patients/2/appointments/new" for ::1 at 2017-01-20 14:15:27 -0800
+Processing by AppointmentsController#new as HTML
+  Parameters: {"patient_id"=>"2"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (5.1ms)
+  Rendered appointments/new.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/patients/2/appointments" for ::1 at 2017-01-20 14:15:31 -0800
+Processing by AppointmentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3kh+J1uJWZLNU3+PAYGIimDfT1/VO9CPHOVkw4Ui3FDcpAnBPL9NylcFqMY672nfowTOqjaxVxGj3uhc/q6N9w==", "patient_id"=>"2", "appointment"=>{"start_time(1i)"=>"2017", "start_time(2i)"=>"1", "start_time(3i)"=>"20", "start_time(4i)"=>"14", "start_time(5i)"=>"15", "office"=>"Test", "address"=>"Test", "appointment_type"=>"Test", "status"=>"Test"}, "commit"=>"Create Appointment"}
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "appointments" ("office", "address", "appointment_type", "status", "start_time", "patient_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["office", "Test"], ["address", "Test"], ["appointment_type", "Test"], ["status", "Test"], ["start_time", 2017-01-20 22:15:00 UTC], ["patient_id", 2], ["created_at", 2017-01-20 22:15:31 UTC], ["updated_at", 2017-01-20 22:15:31 UTC]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/appointments/3
+Completed 302 Found in 12ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/appointments/3" for ::1 at 2017-01-20 14:15:31 -0800
+Processing by AppointmentsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering appointments/show.html.erb within layouts/application
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered appointments/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments/3/edit" for ::1 at 2017-01-20 14:15:35 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (4.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 67ms (Views: 64.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2017-01-20 14:15:37 -0800
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered collection of users/_user.html.erb [3 times] (1.9ms)
+  Rendered users/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 58ms (Views: 55.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:15:38 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.3ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (10.6ms)
+  Rendered patients/index.html.erb within layouts/application (16.6ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 70ms (Views: 68.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/2" for ::1 at 2017-01-20 14:15:39 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 2], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (1.6ms)
+  [1m[36mAttorney Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  [1m[36mAdjuster Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "2"], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (10.5ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 71ms (Views: 64.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/appointments/2/edit" for ::1 at 2017-01-20 14:15:40 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (5.3ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:15:51 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (36.9ms)
+  Rendered appointments/_calendar.html.erb (40.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (46.0ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 92ms (Views: 89.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:15:53 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (9.1ms)
+  Rendered patients/index.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/patients/1" for ::1 at 2017-01-20 14:15:54 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [2 times] (2.4ms)
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.3ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.8ms)
+  [1m[36mAdjuster Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.3ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.6ms)
+  Rendered patients/show.html.erb within layouts/application (19.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 74ms (Views: 65.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:16:14 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (4.9ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:16:23 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (41.9ms)
+  Rendered appointments/_calendar.html.erb (47.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (50.7ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 93ms (Views: 91.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/appointments/3/edit" for ::1 at 2017-01-20 14:16:27 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAppointment Load (0.1ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (4.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 64ms (Views: 61.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/appointments/3/edit" for ::1 at 2017-01-20 14:17:20 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 51ms (Views: 48.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:17:32 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (36.9ms)
+  Rendered appointments/_calendar.html.erb (41.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (45.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 87ms (Views: 85.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:17:35 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (32.5ms)
+  Rendered appointments/_calendar.html.erb (36.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered appointments/index.html.erb within layouts/application (40.1ms)
+  Rendered layouts/_header.html.erb (1.0ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 86ms (Views: 84.1ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/appointments/1" for ::1 at 2017-01-20 14:17:46 -0800
+Processing by AppointmentsController#destroy as JS
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "appointments" WHERE "appointments"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/appointments
+Completed 200 OK in 4ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:17:46 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.4ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (39.7ms)
+  Rendered appointments/_calendar.html.erb (45.2ms)
+  Rendered appointments/index.html.erb within layouts/application (49.7ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 102ms (Views: 99.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/appointments" for ::1 at 2017-01-20 14:19:17 -0800
+Processing by AppointmentsController#index as HTML
+  Rendering appointments/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT "appointments".* FROM "appointments"[0m
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered simple_calendar/_month_calendar.html.erb (37.4ms)
+  Rendered appointments/_calendar.html.erb (41.1ms)
+  Rendered appointments/index.html.erb within layouts/application (44.2ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 95ms (Views: 92.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:19:22 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.5ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (8.6ms)
+  Rendered patients/index.html.erb within layouts/application (13.6ms)
+  Rendered layouts/_header.html.erb (1.1ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 58.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/patients/1" for ::1 at 2017-01-20 14:19:23 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (1.2ms)
+  [1m[36mAttorney Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.6ms)
+  [1m[36mAdjuster Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (13.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 71ms (Views: 65.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:19:24 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Appointment with 'id'=1):
+  
+app/controllers/appointments_controller.rb:17:in `edit'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (2.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.1ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (45.9ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (89.9ms)
+Started GET "/patients/1" for ::1 at 2017-01-20 14:19:37 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (0.9ms)
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.8ms)
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (11.8ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 61ms (Views: 54.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/patients/1" for ::1 at 2017-01-20 14:19:38 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.1ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (1.1ms)
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.4ms)
+  [1m[36mAdjuster Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.4ms)
+  Rendered patients/show.html.erb within layouts/application (12.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 63ms (Views: 57.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/patients/1" for ::1 at 2017-01-20 14:20:09 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (0.9ms)
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.4ms)
+  [1m[36mAdjuster Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.1ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.3ms)
+  Rendered patients/show.html.erb within layouts/application (11.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 57ms (Views: 51.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/appointments/1/edit" for ::1 at 2017-01-20 14:20:13 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Appointment with 'id'=1):
+  
+app/controllers/appointments_controller.rb:17:in `edit'
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1@global/gems/actionpack-5.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.7ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.5ms)
+  Rendering /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/bryanwoodhams/.rvm/gems/ruby-2.3.1/gems/web-console-3.1.1/lib/web_console/templates/index.html.erb (84.4ms)
+Started GET "/patients/1" for ::1 at 2017-01-20 14:20:15 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.2ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (1.0ms)
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 1], ["LIMIT", 1]]
+  [1m[36mAttorney Load (0.2ms)[0m  [1m[34mSELECT  "attorneys".* FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 1], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of attorneys/_attorney.html.erb [2 times] (0.5ms)
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "1"], ["LIMIT", 1]]
+  [1m[36mAdjuster Load (0.2ms)[0m  [1m[34mSELECT  "adjusters".* FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", "1"], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of adjusters/_adjuster.html.erb [1 times] (0.5ms)
+  Rendered patients/show.html.erb within layouts/application (12.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 69ms (Views: 62.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:20:17 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.6ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (11.1ms)
+  Rendered patients/index.html.erb within layouts/application (17.0ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 75ms (Views: 71.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/patients/2" for ::1 at 2017-01-20 14:20:18 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPatient Load (0.7ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  [1m[36mAppointment Load (0.3ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2 OFFSET $3[0m  [["patient_id", 2], ["LIMIT", 30], ["OFFSET", 0]]
+  Rendered collection of appointments/_appointment.html.erb [1 times] (1.3ms)
+  [1m[36mAttorney Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 2], ["LIMIT", 1]]
+  [1m[36mAdjuster Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "2"], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (10.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 68ms (Views: 60.3ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/appointments/2/edit" for ::1 at 2017-01-20 14:20:19 -0800
+Processing by AppointmentsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAppointment Load (0.8ms)[0m  [1m[34mSELECT  "appointments".* FROM "appointments" WHERE "appointments"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering appointments/edit.html.erb within layouts/application
+  Rendered appointments/edit.html.erb within layouts/application (5.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 59ms (Views: 54.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/patients" for ::1 at 2017-01-20 14:20:23 -0800
+Processing by PatientsController#index as HTML
+  Rendering patients/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mPatient Load (0.4ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered collection of patients/_patient.html.erb [11 times] (10.7ms)
+  Rendered patients/index.html.erb within layouts/application (15.7ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+  Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 66ms (Views: 63.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients/4" for ::1 at 2017-01-20 14:20:25 -0800
+Processing by PatientsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering patients/show.html.erb within layouts/application
+  [1m[36mAppointment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "appointments" WHERE "appointments"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAttorney Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "attorneys" WHERE "attorneys"."patient_id" = $1 LIMIT $2[0m  [["patient_id", 4], ["LIMIT", 1]]
+  [1m[36mAdjuster Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "adjusters" WHERE "adjusters"."patient_id" = $1 LIMIT $2[0m  [["patient_id", "4"], ["LIMIT", 1]]
+  Rendered patients/show.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 61ms (Views: 55.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/patients/4/appointments/new" for ::1 at 2017-01-20 14:20:26 -0800
+Processing by AppointmentsController#new as HTML
+  Parameters: {"patient_id"=>"4"}
+  [1m[36mPatient Load (0.2ms)[0m  [1m[34mSELECT  "patients".* FROM "patients" WHERE "patients"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering appointments/new.html.erb within layouts/application
+  Rendered appointments/_form.html.erb (5.5ms)
+  Rendered appointments/new.html.erb within layouts/application (7.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 61ms (Views: 58.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-20 14:22:27 -0800
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 49ms (Views: 47.0ms | ActiveRecord: 0.4ms)
+
+
