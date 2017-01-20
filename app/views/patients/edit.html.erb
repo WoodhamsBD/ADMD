@@ -11,6 +11,9 @@
 
       <%= f.label :report_type, class: 'label-control' %>
       <%= f.select :report_type, options_for_select([["QME", "QME"],["AME", "AME"],["IME", "IME"],["SUPP", "SUPP"]]) %>
+      <br>
+      <%= f.label :interpreter, class: 'label-control' %>
+      <%= f.text_field :interpreter, class: 'form-control' %>
 
       <%= f.label :street_address, class: 'label-control'%>
       <%= f.text_field :street_address, class: 'form-control' %>
