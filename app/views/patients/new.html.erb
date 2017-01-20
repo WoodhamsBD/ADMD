@@ -1,129 +1,135 @@
 <% provide(:title, 'New Patient') %>
 <h1>New Patient Information:</h1>
 
+
 <div class="row">
+	<%= form_for(@patient) do |f| %>
+    <%= render 'shared/patient_messages' %>
 
-		<%= form_for(@patient) do |f| %>
-      <%= render 'shared/patient_messages' %>
+    <div class="col-md-4 patient_intake">
+      <h2>Patient Biographical Information</h3>
+      <%= f.label :name, class: 'label-control'%>
+      <%= f.text_field :name, class: 'form-control' %>
 
-      <div class="col-md-4 patient_intake">
-        <h2>Patient Biographical Information</h3>
-        <%= f.label :name, class: 'label-control'%>
-        <%= f.text_field :name, class: 'form-control' %>
+      <%= f.label :report_type, class: 'label-control report_dropdown' %>
+      <%= f.select :report_type, options_for_select([["QME", "QME"],["AME", "AME"],["IME", "IME"],["SUPP", "SUPP"]]) %>
 
-        <%= f.label :report_type, class: 'label-control report_dropdown' %>
-        <%= f.select :report_type, options_for_select([["QME", "QME"],["AME", "AME"],["IME", "IME"],["SUPP", "SUPP"]]) %>
+      <%= f.label :street_address, class: 'label-control'%>
+      <%= f.text_field :street_address, class: 'form-control' %>
 
-        <%= f.label :street_address, class: 'label-control'%>
-        <%= f.text_field :street_address, class: 'form-control' %>
+      <%= f.label :city, class: 'label-control'%>
+      <%= f.text_field :city, class: 'form-control' %>
 
-        <%= f.label :city, class: 'label-control'%>
-        <%= f.text_field :city, class: 'form-control' %>
+      <%= f.label :state, class: 'label-control'%>
+      <%= f.text_field :state, class: 'form-control' %>
 
-        <%= f.label :state, class: 'label-control'%>
-        <%= f.text_field :state, class: 'form-control' %>
+      <%= f.label :zip_code, class: 'label-control'%>
+      <%= f.text_field :zip_code, class: 'form-control' %>
 
-        <%= f.label :zip_code, class: 'label-control'%>
-        <%= f.text_field :zip_code, class: 'form-control' %>
+      <%= f.label :phone, class: 'label-control'%>
+      <%= f.text_field :phone, class: 'form-control' %>
 
-        <%= f.label :phone, class: 'label-control'%>
-        <%= f.text_field :phone, class: 'form-control' %>
+      <%= f.label :ssn, class: 'label-control'%>
+      <%= f.text_field :ssn, class: 'form-control' %>
 
-        <%= f.label :ssn, class: 'label-control'%>
-        <%= f.text_field :ssn, class: 'form-control' %>
+      <%= f.label :dob, class: 'label-control'%>
+      <%= f.text_field :dob, class: 'form-control' %>
 
-        <%= f.label :dob, class: 'label-control'%>
-        <%= f.text_field :dob, class: 'form-control' %>
+      <%= f.label :date_of_injury, class: 'label-control' %>
+      <%= f.text_field :date_of_injury, class: 'form-control' %>
 
-        <%= f.label :date_of_injury, class: 'label-control' %>
-        <%= f.text_field :date_of_injury, class: 'form-control' %>
+      <%= f.label :employer, class: 'label-control'%>
+      <%= f.text_field :employer, class: 'form-control' %>
 
-        <%= f.label :employer, class: 'label-control'%>
-        <%= f.text_field :employer, class: 'form-control' %>
+      <%= f.label :claim_number, class: 'label-control'%>
+      <%= f.text_field :claim_number, class: 'form-control' %>
 
-        <%= f.label :claim_number, class: 'label-control'%>
-        <%= f.text_field :claim_number, class: 'form-control' %>
+      <%= f.label :panel_number, class: 'label-control'%>
+      <%= f.text_field :panel_number, class: 'form-control' %>
 
-        <%= f.label :panel_number, class: 'label-control'%>
-        <%= f.text_field :panel_number, class: 'form-control' %>
+      <%= f.label :wcab_number, class: 'label-control'%>
+      <%= f.text_field :wcab_number, class: 'form-control' %>
 
-        <%= f.label :wcab_number, class: 'label-control'%>
-        <%= f.text_field :wcab_number, class: 'form-control' %>
+      <%= f.label :notes, class: 'label-control'%>
+      <%= f.text_area :notes, :rows => 3, class: 'form-control' %>
+    </div>
 
-        <%= f.label :notes, class: 'label-control'%>
-        <%= f.text_area :notes, :rows => 3, class: 'form-control' %>
-      </div>
-
-      <div class="col-md-4 patient_intake attorney_creation">
+    <div class="col-md-4 patient_intake attorney_creation">
       <h2>Patient Attorneys</h2>
-        <%= f.fields_for :attorneys do |attorney_builder| %>
-            <%= attorney_builder.label :name %>
-            <%= attorney_builder.text_field :name, class: 'form-control' %>
+      <%= f.fields_for :attorneys do |attorney_builder| %>
+          <%= attorney_builder.label :name %>
+          <%= attorney_builder.text_field :name, class: 'form-control' %>
 
-            <%= attorney_builder.label :attorney_type %>
-            <%= attorney_builder.select :attorney_type, options_for_select([["Applicant", "Applicant"], ["Defense", "Defense"]]) %>
+          <%= attorney_builder.label :attorney_type %>
+          <%= attorney_builder.select :attorney_type, options_for_select([["Applicant", "Applicant"], ["Defense", "Defense"]]) %>
 
-            <%= attorney_builder.label :firm %>
-            <%= attorney_builder.text_field :firm, class: 'form-control' %>
+          <%= attorney_builder.label :firm %>
+          <%= attorney_builder.text_field :firm, class: 'form-control' %>
 
-            <%= attorney_builder.label :address %>
-            <%= attorney_builder.text_field :address, class: 'form-control' %>
+          <%= attorney_builder.label :address %>
+          <%= attorney_builder.text_field :address, class: 'form-control' %>
 
-            <%= attorney_builder.label :phone %>
-            <%= attorney_builder.text_field :phone, class: 'form-control' %>
+          <%= attorney_builder.label :phone %>
+          <%= attorney_builder.text_field :phone, class: 'form-control' %>
 
-            <%= attorney_builder.label :fax %>
-            <%= attorney_builder.text_field :fax, class: 'form-control' %>
+          <%= attorney_builder.label :fax %>
+          <%= attorney_builder.text_field :fax, class: 'form-control' %>
 
-        <% end %>
-            <hr>
-            <%= f.fields_for :attorneys do |attorney_builder_1| %>
-            <%= attorney_builder_1.label :name %>
-            <%= attorney_builder_1.text_field :name, class: 'form-control' %>
+      <% end %>
+          <hr>
+          <%= f.fields_for :attorneys do |attorney_builder_1| %>
+          <%= attorney_builder_1.label :name %>
+          <%= attorney_builder_1.text_field :name, class: 'form-control' %>
 
-            <%= attorney_builder_1.label :attorney_type %>
-            <%= attorney_builder_1.select :attorney_type, options_for_select([["Defense", "Defense"], ["Applicant", "Applicant"]]) %>
+          <%= attorney_builder_1.label :attorney_type %>
+          <%= attorney_builder_1.select :attorney_type, options_for_select([["Defense", "Defense"], ["Applicant", "Applicant"]]) %>
 
-            <%= attorney_builder_1.label :firm %>
-            <%= attorney_builder_1.text_field :firm, class: 'form-control' %>
+          <%= attorney_builder_1.label :firm %>
+          <%= attorney_builder_1.text_field :firm, class: 'form-control' %>
 
-            <%= attorney_builder_1.label :address %>
-            <%= attorney_builder_1.text_field :address, class: 'form-control' %>
+          <%= attorney_builder_1.label :address %>
+          <%= attorney_builder_1.text_field :address, class: 'form-control' %>
 
-            <%= attorney_builder_1.label :phone %>
-            <%= attorney_builder_1.text_field :phone, class: 'form-control' %>
+          <%= attorney_builder_1.label :phone %>
+          <%= attorney_builder_1.text_field :phone, class: 'form-control' %>
 
-            <%= attorney_builder_1.label :fax %>
-            <%= attorney_builder_1.text_field :fax, class: 'form-control' %>
+          <%= attorney_builder_1.label :fax %>
+          <%= attorney_builder_1.text_field :fax, class: 'form-control' %>
 
-        <% end %>
-        </div>
-
-        <div class="col-md-4 patient_intake adjuster_creation">
-        <h2>Patient Adjuster</h2>
-        <%= f.fields_for :adjusters do |aj| %>
-          <%= aj.label :name %>
-          <%= aj.text_field :name, class: 'form-control' %>
-
-          <%= aj.label :agency %>
-          <%= aj.text_field :agency, class: 'form-control' %>
-
-          <%= aj.label :address %>
-          <%= aj.text_field :address, class: 'form-control' %>
-
-          <%= aj.label :phone %>
-          <%= aj.text_field :phone, class: 'form-control' %>
-
-          <%= aj.label :fax %>
-          <%= aj.text_field :fax, class: 'form-control' %>
-
-        <% end %>
+      <% end %>
       </div>
+
+    <div class="col-md-4 patient_intake adjuster_creation">
+      <h2>Patient Adjuster</h2>
+      <%= f.fields_for :adjusters do |aj| %>
+        <%= aj.label :name %>
+        <%= aj.text_field :name, class: 'form-control' %>
+
+        <%= aj.label :agency %>
+        <%= aj.text_field :agency, class: 'form-control' %>
+
+        <%= aj.label :address %>
+        <%= aj.text_field :address, class: 'form-control' %>
+
+        <%= aj.label :phone %>
+        <%= aj.text_field :phone, class: 'form-control' %>
+
+        <%= aj.label :fax %>
+        <%= aj.text_field :fax, class: 'form-control' %>
+
+      <% end %>
+    </div>
 </div>
 
 <div class="row"> 
   <div class="col-md-3 col-md-offset-2">
-  <%= f.submit "Save this Patient", class: "btn btn-primary" %>
-  <% end %>
+    <%= f.submit "Save this Patient", class: "btn btn-primary" %>
   </div>
 </div>
+  <% end %>
+</div>
+
+
+
+
+
